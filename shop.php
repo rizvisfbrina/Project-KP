@@ -133,8 +133,8 @@
                                             </li>
                                             <li class="total">
                                                 <span class="pull-right">Total: $20.00</span>
-                                                <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
-                                                <a href="checkout-1.html" class="btn btn-sm btn-checkout">Checkout</a>
+                                                <a href="cart.php" class="btn btn-sm btn-cart">Cart</a>
+                                                <a href="checkout-1.php" class="btn btn-sm btn-checkout">Checkout</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -169,15 +169,15 @@
 
                                     <div class="collapse navbar-collapse align-items-start collapse" id="karl-navbar">
                                         <ul class="navbar-nav animated" id="nav">
-                                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                                            <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                                 <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                                                    <a class="dropdown-item" href="index.html">Home</a>
-                                                    <a class="dropdown-item" href="shop.html">Shop</a>
-                                                    <a class="dropdown-item" href="product-details.html">Product Details</a>
-                                                    <a class="dropdown-item" href="cart.html">Cart</a>
-                                                    <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                                    <a class="dropdown-item" href="index.php">Home</a>
+                                                    <a class="dropdown-item" href="shop.php">Shop</a>
+                                                    <a class="dropdown-item" href="product-details.php">Product Details</a>
+                                                    <a class="dropdown-item" href="cart.php">Cart</a>
+                                                    <a class="dropdown-item" href="checkout.php">Checkout</a>
                                                 </div>
                                             </li>
                                             <li class="nav-item"><a class="nav-link" href="#">Dresses</a></li>
@@ -198,24 +198,7 @@
         </header>
         <!-- ****** Header Area End ****** -->
 
-        <section class="top-discount-area d-md-flex align-items-center">
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>Free Shipping &amp; Returns</h5>
-                <h6><a href="#">BUY NOW</a></h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for all dresses</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-            <!-- Single Discount Area -->
-            <div class="single-discount-area">
-                <h5>20% Discount for students</h5>
-                <h6>USE CODE: Colorlib</h6>
-            </div>
-        </section>
-
+       
         <!-- ****** Quick View Modal Area Start ****** -->
         <div class="modal fade" id="quickview" tabindex="-1" role="dialog" aria-labelledby="quickview" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -259,11 +242,11 @@
                                             <button type="submit" name="addtocart" value="5" class="cart-submit">Add to cart</button>
                                             <!-- Wishlist -->
                                             <div class="modal_pro_wishlist">
-                                                <a href="wishlist.html" target="_blank"><i class="ti-heart"></i></a>
+                                                <a href="wishlist.php" target="_blank"><i class="ti-heart"></i></a>
                                             </div>
                                             <!-- Compare -->
                                             <div class="modal_pro_compare">
-                                                <a href="compare.html" target="_blank"><i class="ti-stats-up"></i></a>
+                                                <a href="compare.php" target="_blank"><i class="ti-stats-up"></i></a>
                                             </div>
                                         </form>
 
@@ -300,7 +283,7 @@
                                         <ul id="menu-content2" class="menu-content collapse out">
                                             <!-- Single Item -->
                                             <li data-toggle="collapse" data-target="#women2">
-                                                <a href="#">Woman wear</a>
+                                                <a href="#">Alih Daya</a>
                                                 <ul class="sub-menu collapse show" id="women2">
                                                     <li><a href="#">Midi Dresses</a></li>
                                                     <li><a href="#">Maxi Dresses</a></li>
@@ -311,45 +294,11 @@
                                             </li>
                                             <!-- Single Item -->
                                             <li data-toggle="collapse" data-target="#man2" class="collapsed">
-                                                <a href="#">Man Wear</a>
+                                                <a href="#">Paket Rombongan</a>
                                                 <ul class="sub-menu collapse" id="man2">
                                                     <li><a href="#">Man Dresses</a></li>
                                                     <li><a href="#">Man Black Dresses</a></li>
                                                     <li><a href="#">Man Mini Dresses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#kids2" class="collapsed">
-                                                <a href="#">Children</a>
-                                                <ul class="sub-menu collapse" id="kids2">
-                                                    <li><a href="#">Children Dresses</a></li>
-                                                    <li><a href="#">Mini Dresses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#bags2" class="collapsed">
-                                                <a href="#">Bags &amp; Purses</a>
-                                                <ul class="sub-menu collapse" id="bags2">
-                                                    <li><a href="#">Bags</a></li>
-                                                    <li><a href="#">Purses</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#eyewear2" class="collapsed">
-                                                <a href="#">Eyewear</a>
-                                                <ul class="sub-menu collapse" id="eyewear2">
-                                                    <li><a href="#">Eyewear Style 1</a></li>
-                                                    <li><a href="#">Eyewear Style 2</a></li>
-                                                    <li><a href="#">Eyewear Style 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- Single Item -->
-                                            <li data-toggle="collapse" data-target="#footwear2" class="collapsed">
-                                                <a href="#">Footwear</a>
-                                                <ul class="sub-menu collapse" id="footwear2">
-                                                    <li><a href="#">Footwear 1</a></li>
-                                                    <li><a href="#">Footwear 2</a></li>
-                                                    <li><a href="#">Footwear 3</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -357,7 +306,7 @@
                                 </div>
                             </div>
 
-                            <div class="widget price mb-50">
+                            <!-- <div class="widget price mb-50">
                                 <h6 class="widget-title mb-30">Filter by Price</h6>
                                 <div class="widget-desc">
                                     <div class="slider-range">
@@ -369,9 +318,9 @@
                                         <div class="range-price">Price: 0 - 1350</div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="widget color mb-70">
+                            <!-- <div class="widget color mb-70">
                                 <h6 class="widget-title mb-30">Filter by Color</h6>
                                 <div class="widget-desc">
                                     <ul class="d-flex justify-content-between">
@@ -383,9 +332,9 @@
                                         <li class="cyan"><a href="#"><span>(29)</span></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <div class="widget size mb-50">
+                            <!-- <div class="widget size mb-50">
                                 <h6 class="widget-title mb-30">Filter by Size</h6>
                                 <div class="widget-desc">
                                     <ul class="d-flex justify-content-between">
@@ -397,44 +346,7 @@
                                         <li><a href="#">XXL</a></li>
                                     </ul>
                                 </div>
-                            </div>
-
-                            <div class="widget recommended">
-                                <h6 class="widget-title mb-30">Recommended</h6>
-
-                                <div class="widget-desc">
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex mb-30">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-10.jpg" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Men’s T-shirt</h6>
-                                            <p>$ 39.99</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex mb-30">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-11.jpg" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Blue mini top</h6>
-                                            <p>$ 19.99</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="img/product-img/product-12.jpg" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Women’s T-shirt</h6>
-                                            <p>$ 39.99</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -629,11 +541,10 @@
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="single_footer_area">
                             <div class="footer-logo">
-                                <img src="img/core-img/logo.png" alt="">
                             </div>
                             <div class="copywrite_text d-flex align-items-center">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                         </div>
@@ -643,9 +554,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         <div class="single_footer_area">
                             <ul class="footer_widget_menu">
                                 <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Faq</a></li>
-                                <li><a href="#">Returns</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
@@ -662,19 +570,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         </div>
                     </div>
                     <!-- Single Footer Area Start -->
-                    <div class="col-12 col-lg-5">
-                        <div class="single_footer_area">
-                            <div class="footer_heading mb-30">
-                                <h6>Subscribe to our newsletter</h6>
-                            </div>
-                            <div class="subscribtion_form">
-                                <form action="#" method="post">
-                                    <input type="email" name="mail" class="mail" placeholder="Your email here">
-                                    <button type="submit" class="submit">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="line"></div>
 
@@ -683,7 +578,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="row">
                         <div class="col-12">
                             <div class="footer_social_area text-center">
-                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
