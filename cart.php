@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Karl - Fashion Ecommerce Template | Cart</title>
+    <title>PT Pelindo Daya Sejahtera</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div class="catagories-side-menu">
+<div class="catagories-side-menu">
         <!-- Close Icon -->
         <div id="sideMenuClose">
             <i class="ti-close"></i>
@@ -36,58 +36,23 @@
                 <ul id="menu-content" class="menu-content collapse out">
                     <!-- Single Item -->
                     <li data-toggle="collapse" data-target="#women" class="collapsed active">
-                        <a href="#">Woman wear <span class="arrow"></span></a>
+                        <a href="#">Ahli Daya <span class="arrow"></span></a>
                         <ul class="sub-menu collapse" id="women">
-                            <li><a href="#">Midi Dresses</a></li>
+                            <li><a href="#">Sekretaris</a></li>
                             <li><a href="#">Maxi Dresses</a></li>
                             <li><a href="#">Prom Dresses</a></li>
-                            <li><a href="#">Little Black Dresses</a></li>
-                            <li><a href="#">Mini Dresses</a></li>
                         </ul>
                     </li>
                     <!-- Single Item -->
                     <li data-toggle="collapse" data-target="#man" class="collapsed">
-                        <a href="#">Man Wear <span class="arrow"></span></a>
+                        <a href="#">Borongan <span class="arrow"></span></a>
                         <ul class="sub-menu collapse" id="man">
-                            <li><a href="#">Man Dresses</a></li>
+                            <li><a href="#">Office Boy</a></li>
                             <li><a href="#">Man Black Dresses</a></li>
                             <li><a href="#">Man Mini Dresses</a></li>
                         </ul>
                     </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#kids" class="collapsed">
-                        <a href="#">Children <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="kids">
-                            <li><a href="#">Children Dresses</a></li>
-                            <li><a href="#">Mini Dresses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#bags" class="collapsed">
-                        <a href="#">Bags &amp; Purses <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="bags">
-                            <li><a href="#">Bags</a></li>
-                            <li><a href="#">Purses</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#eyewear" class="collapsed">
-                        <a href="#">Eyewear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="eyewear">
-                            <li><a href="#">Eyewear Style 1</a></li>
-                            <li><a href="#">Eyewear Style 2</a></li>
-                            <li><a href="#">Eyewear Style 3</a></li>
-                        </ul>
-                    </li>
-                    <!-- Single Item -->
-                    <li data-toggle="collapse" data-target="#footwear" class="collapsed">
-                        <a href="#">Footwear <span class="arrow"></span></a>
-                        <ul class="sub-menu collapse" id="footwear">
-                            <li><a href="#">Footwear 1</a></li>
-                            <li><a href="#">Footwear 2</a></li>
-                            <li><a href="#">Footwear 3</a></li>
-                        </ul>
-                    </li>
+                   
                 </ul>
             </div>
         </div>
@@ -96,7 +61,7 @@
     <div id="wrapper">
 
         <!-- ****** Header Area Start ****** -->
-        <header class="header_area bg-img background-overlay-white" style="background-image: url(img/bg-img/bg-1.jpg);">
+        <header class="header_area">
             <!-- Top Header Area Start -->
             <div class="top_header_area">
                 <div class="container h-100">
@@ -106,7 +71,7 @@
                             <div class="top_single_area d-flex align-items-center">
                                 <!-- Logo Area -->
                                 <div class="top_logo">
-                                    <a href="#"><img src="img/core-img/logo.png" alt=""></a>
+                                    <a href="#"><img src="img/core-img/logo-pds.png" alt=""></a>
                                 </div>
                                 <!-- Cart & Menu Area -->
                                 <div class="header-cart-menu d-flex align-items-center ml-auto">
@@ -134,7 +99,7 @@
                                             <li class="total">
                                                 <span class="pull-right">Total: $20.00</span>
                                                 <a href="cart.php" class="btn btn-sm btn-cart">Cart</a>
-                                                <a href="checkout-1.php" class="btn btn-sm btn-checkout">Checkout</a>
+                                                <a href="checkout.php" class="btn btn-sm btn-checkout">Checkout</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -156,7 +121,7 @@
                         <div class="col-12 d-md-flex justify-content-between">
                             <!-- Header Social Area -->
                             <div class="header-social-area">
-                                <a href="#"><span class="karl-level">Share</span> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -171,17 +136,12 @@
                                         <ul class="navbar-nav animated" id="nav">
                                             <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                                <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                                                 <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                                                    <a class="dropdown-item" href="index.php">Home</a>
-                                                    <a class="dropdown-item" href="shop.php">Shop</a>
-                                                    <a class="dropdown-item" href="product-details.php">Product Details</a>
-                                                    <a class="dropdown-item" href="cart.php">Cart</a>
-                                                    <a class="dropdown-item" href="checkout.php">Checkout</a>
+                                                    <a class="dropdown-item" href="shop.php">Ahli Daya</a>
+                                                    <a class="dropdown-item" href="product-details.php">Pemborongan</a>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Dresses</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#"><span class="karl-level">hot</span> Shoes</a></li>
                                             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                                         </ul>
                                     </div>
@@ -266,17 +226,14 @@
             </div>
         </div>
         <!-- ****** Cart Area End ****** -->
-
-        <!-- ****** Footer Area Start ****** -->
-        <footer class="footer_area">
+<!-- ****** Footer Area Start ****** -->
+<footer class="footer_area">
             <div class="container">
                 <div class="row">
                     <!-- Single Footer Area Start -->
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="single_footer_area">
-                            <div class="footer-logo">
-                            </div>
-                            <div class="copywrite_text d-flex align-items-center">
+                            <div class="footer_widget_menu">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
@@ -288,7 +245,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                         <div class="single_footer_area">
                             <ul class="footer_widget_menu">
                                 <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -296,14 +252,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2">
                         <div class="single_footer_area">
                             <ul class="footer_widget_menu">
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Shipping</a></li>
                                 <li><a href="#">Our Policies</a></li>
-                                <li><a href="#">Afiliates</a></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Single Footer Area Start -->
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+                        <div class="single_footer_area">
+                            <ul class="footer_widget_menu">
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Single Footer Area Start -->
+                     <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+                        <div class="single_footer_area">
+                            <ul class="footer_widget_menu">
+                                <li><a href="#">Shipping</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="line"></div>
 
