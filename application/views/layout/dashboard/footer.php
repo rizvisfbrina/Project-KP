@@ -1,7 +1,7 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>© 2019 Copyright by PT Pelindo Daya Sejahtera. All rights reserved.</small>
+          <small>Copyright © PT Pelindo Daya Sejahtera 2019</small>
         </div>
       </div>
     </footer>

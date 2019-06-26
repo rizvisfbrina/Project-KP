@@ -8,7 +8,7 @@
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
 					<a class="nav-link" href="<?= site_url('shop'); ?>">
 						<i class="fa fa-fw fa-dashboard"></i>
-						<span class="nav-link-text">Go to Site</span>
+						<span class="nav-link-text">Kunjungi Website</span>
 					</a>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
@@ -18,49 +18,49 @@
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_user; ?>" id="collapseMulti2">
 						<li class="<?= $manage_user_active; ?>">
-							<a href="<?= site_url('admin/view_users'); ?>">Manage</a>
+							<a href="<?= site_url('admin/view_users'); ?>">Kelola</a>
 						</li>
 					</ul>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
 					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-gift"></i>
-						<span class="nav-link-text">Products</span>
+						<span class="nav-link-text">Produk</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_product; ?>" id="collapseMulti3">
 						<li class="<?= $manage_product_active; ?>">
-							<a href="<?= site_url('admin/view_product'); ?>">Manage</a>
+							<a href="<?= site_url('admin/view_product'); ?>">Kelola</a>
 						</li>
 						<li class="<?= $add_product_active; ?>">
-							<a href="<?= site_url('admin/add_product'); ?>">Add</a>
+							<a href="<?= site_url('admin/add_product'); ?>">Tambah</a>
 						</li>
 					</ul>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Categories">
 					<a class="nav-link nav-link-collapse" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-tag"></i>
-						<span class="nav-link-text">Categories</span>
+						<span class="nav-link-text">Kategori</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_category; ?>" id="collapseMulti4">
 						<li class="<?= $manage_category_active; ?>">
-							<a href="<?= site_url('admin/view_category'); ?>">Manage</a>
+							<a href="<?= site_url('admin/view_category'); ?>">Kelola</a>
 						</li>
 						<li class="<?= $add_category_active; ?>">
-							<a href="<?= site_url('admin/add_category'); ?>">Add</a>
+							<a href="<?= site_url('admin/add_category'); ?>">Tambah</a>
 						</li>
 					</ul>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Orders and Cart">
 					<a class="nav-link nav-link-collapse" data-toggle="collapse" href="#collapseMulti5" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-shopping-cart"></i>
-						<span class="nav-link-text">Orders and Cart</span>
+						<span class="nav-link-text">Pemesanan dan Keranjang</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_order; ?>" id="collapseMulti5">
 						<li class="<?= $manage_order_active; ?>">
-							<a href="<?= site_url('admin/manage_order'); ?>">Manage Order</a>
+							<a href="<?= site_url('admin/manage_order'); ?>">Kelola Pemesanan</a>
 						</li>
 						<li class="<?= $manage_cart_active; ?>">
-							<a href="<?= site_url('admin/manage_cart'); ?>">Manage Cart</a>
+							<a href="<?= site_url('admin/manage_cart'); ?>">Kelola Keranjang</a>
 						</li>
 					</ul>
 				</li>

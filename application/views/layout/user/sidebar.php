@@ -8,34 +8,34 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="<?php echo site_url('shop');?>">
             <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Go to Site</span>
+            <span class="nav-link-text">Kunjungi Website</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-user"></i>
-            <span class="nav-link-text">Manage Profile</span>
+            <span class="nav-link-text">Kelola Profil</span>
           </a>
           <ul class="sidenav-second-level collapse <?= $show_profile; ?>" id="collapseExamplePages">
             <li class="<?= $change_detail_active; ?>">
-              <a href="<?php echo site_url("user/change_details");?>">Change Details</a>
+              <a href="<?php echo site_url("user/change_details");?>">Ubah Detail</a>
             </li>
             <li class="<?= $change_password_active; ?>">
-              <a href="<?php echo site_url("user/change_password");?>">Change Password</a>
+              <a href="<?php echo site_url("user/change_password");?>">Ubah Password</a>
             </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#product" data-parent="#exampleAccordion">
             <i class="fa fa-shopping-cart"></i>
-            <span class="nav-link-text">Carts and Orders</span>
+            <span class="nav-link-text">Pemesanan dan Keranjang</span>
           </a>
           <ul class="sidenav-second-level collapse <?= $show_cart_order; ?>" id="product">
             <li class="<?= $your_cart_active; ?>">
-              <a href="<?php echo site_url("user/your_cart");?>">Your Cart</a>
+              <a href="<?php echo site_url("user/your_cart");?>">Keranjang</a>
             </li>
             <li class="<?= $your_order_active; ?>">
-              <a href="<?php echo site_url("user/your_order");?>">Your Order</a>
+              <a href="<?php echo site_url("user/your_order");?>">Pemesanan</a>
             </li>
           </ul>
         </li>
