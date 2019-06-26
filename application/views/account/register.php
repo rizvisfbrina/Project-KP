@@ -9,12 +9,24 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="FName">First name</label>
-                <input class="form-control" id="FName" name="FName" type="text" aria-describedby="nameHelp" placeholder="Enter first name" value="<?= set_value('FName'); ?>" >
+                <label for="FName">Nama Depan</label>
+                <input class="form-control" id="FName" name="FName" type="text" aria-describedby="nameHelp" placeholder="Masukkan nama depan" value="<?= set_value('FName'); ?>" >
               </div>
               <div class="col-md-6">
-                <label for="LName">Last name</label>
-                <input class="form-control" id="LName" name="LName" type="text" aria-describedby="nameHelp" placeholder="Enter last name" value="<?= set_value('LName'); ?>">
+                <label for="LName">Nama Belakang</label>
+                <input class="form-control" id="LName" name="LName" type="text" aria-describedby="nameHelp" placeholder="Masukkan nama belakang" value="<?= set_value('LName'); ?>">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="PName">Nama Perusahaan</label>
+                <input class="form-control" id="PName" name="PName" type="text" aria-describedby="nameHelp" placeholder="Masukkan nama perusahaan" value="<?= set_value('PName'); ?>" >
+              </div>
+              <div class="col-md-6">
+                <label for="email">Email Perusahaan</label>
+                <input class="form-control" id="email" name="email" type="text" aria-describedby="nameHelp" placeholder="Masukkan email perusahaan" value="<?= set_value('email'); ?>">
               </div>
             </div>
           </div>
@@ -22,11 +34,7 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="username">Username</label>
-                <input class="form-control" id="username" name="username" type="text" placeholder="Enter username" value="<?= set_value('username'); ?>">
-              </div>
-              <div class="col-md-6">
-                <label for="email">Email address</label>
-                <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" value="<?= set_value('email'); ?>">
+                <input class="form-control" id="username" name="username" type="text" placeholder="Masukkan username" value="<?= set_value('username'); ?>">
               </div>
             </div>
           </div>

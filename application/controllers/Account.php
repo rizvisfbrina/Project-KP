@@ -34,7 +34,7 @@ class Account extends CI_Controller {
     **/
 	public function registerAccount() {
 		$this->form_validation->set_rules(
-			'FName', 'First Name',
+			'FName', 'Nama Depan',
 			'trim|required|min_length[5]|max_length[20]|alpha',
 			array(
 				'required' => 'You have not provided %s.',
@@ -45,13 +45,32 @@ class Account extends CI_Controller {
 		);
 
 		$this->form_validation->set_rules(
-			'LName', 'Last Name',
+			'LName', 'Nama Belakang',
 			'trim|required|min_length[5]|max_length[20]|alpha',
 			array(
 				'required' => 'You have not provided %s.',
 				'min_length' => 'Your {field} needs to be at least {param} characters long',
 				'max_length' => 'Your {field} needs to be at most {param} characters long',
 				'alpha' => 'You may only use alphabet in your {field}'
+			)
+		);
+
+		$this->form_validation->set_rules(
+			'PName', 'Nama Perusahaan',
+			'trim|required|min_length[5]|max_length[20]|alpha',
+			array(
+				'required' => 'You have not provided %s.',
+				'min_length' => 'Your {field} needs to be at least {param} characters long',
+				'max_length' => 'Your {field} needs to be at most {param} characters long',
+				'alpha' => 'You may only use alphabet in your {field}'
+			)
+		);
+	
+		$this->form_validation->set_rules('email', 'Email Perusahaan', 'trim|required|is_unique[user_table.email]|valid_email', 
+			array(
+			'required' => 'You have not provided %s.',
+			'is_unique' => 'This %s already exists.',
+			'valid_email' => 'You did not provide a valid E-Mail Address'
 			)
 		);
 
@@ -62,14 +81,6 @@ class Account extends CI_Controller {
 				'required' => 'You have not provided %s.',
 				'is_unique' => 'This %s already exists.',
 				'alpha' => 'You may only use alphabet and numbers for your username'
-			)
-		);
-
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|is_unique[user_table.email]|valid_email', 
-			array(
-				'required' => 'You have not provided %s.',
-				'is_unique' => 'This %s already exists.',
-				'valid_email' => 'You did not provide a valid E-Mail Address'
 			)
 		);
 
@@ -90,6 +101,7 @@ class Account extends CI_Controller {
 			$email = $this->input->post('email', TRUE);
 			$FName = $this->input->post('FName', TRUE);
 			$LName = $this->input->post('LName', TRUE);
+			$PName = $this->input->post('PName', TRUE);
 			$password = $this->input->post('password', TRUE);
 			$confPassword = $this->input->post('confPassword', TRUE);
 
@@ -98,6 +110,7 @@ class Account extends CI_Controller {
 				"last_name" => $LName,
 				"username" => $username,
 				"email" => $email,
+				"perusahaan_name" => $PName,
 				"password" => password_hash($password, PASSWORD_DEFAULT),
 				"user_type" => "user"
 			);

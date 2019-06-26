@@ -7,14 +7,14 @@
           <a href="<?= site_url('user/dashboard');?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item">
-          <a href="<?= site_url('user/your_order');?>">Order Listing</a>
+          <a href="<?= site_url('user/your_order');?>">List Pemesanan</a>
         </li>
-        <li class="breadcrumb-item active">Your Order</li>
+        <li class="breadcrumb-item active">Pesanan Anda</li>
       </ol>
       <!-- Active Cart Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-shopping-cart"> </i> Your Order</div>
+          <i class="fa fa-shopping-cart"> </i>Pesanan Anda</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table" id="dataTable" width="100%" cellspacing="0">
@@ -22,10 +22,10 @@
                 <?php $count = 1; ?>
                   <thead>
                     <th>No</th>
-                    <th>Product Image</th>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
+                    <th>Gambar Jasa</th>
+                    <th>Nama Jasa</th>
+                    <th>Jumlah</th>
+                    <th>Harga</th>
                   </thead>
                   <?php foreach($cartData as $cart): ?>
                   <tr align="center">
@@ -41,10 +41,12 @@
                       </a>
                     </td>
                     <td rowspan=1 align="left" >
-                      Qty : <?= $cart->quantity;?>
+                      Jumlah : <?= $cart->quantity;?>
                     </td>
                     <td rowspan=1 align="left" >
-                      Price : $ <?= number_format ( $cart->price * $cart->quantity, 2 );?>
+                      Price : Rp. <?= number_format ( $cart->price * $cart->quantity, 2 );?>
+                      <br>
+                      Pajak : Rp. <?= number_format ( $cart->price * $cart->quantity, 2 );?>
                     </td>
                   </tr><tr>
                     <td rowspan=1 colspan=3 align="left"><?= $cart->short_desc; ?></td>
@@ -52,8 +54,8 @@
                 <?php
                   endforeach;
                 ?>
-                <tr><td colspan=3></td><th colspan=1>Total Price :</th><th colspan='2'> $ <?= number_format( $totalPrice, 2); ?></th></tr>
-                <tr><td colspan=3></td><th colspan=1>Date Bought :</th><th colspan='2'>
+                <tr><td colspan=3></td><th colspan=1>Total Harga :</th><th colspan='2'> Rp. <?= number_format( $totalPrice, 2); ?></th></tr>
+                <tr><td colspan=3></td><th colspan=1>Tanggal pembelian :</th><th colspan='2'>
                     <?= date_format(date_create($cart->date_buy), "d M Y"); ?>
                 </th></tr>
               </tbody>
