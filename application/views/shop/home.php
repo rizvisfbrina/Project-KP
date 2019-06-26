@@ -5,7 +5,7 @@
 	<div id="alert_message"></div>
 	<div class="row">
 		<div class="col-lg-3">
-			<h3 class="my-4">Category</h3>
+			<h3 class="my-4">Kategori</h3>
 			<ul class="list-group">
 				<?php foreach( $categoryData as $category ): ?>
 					<li class="list-group-item">
@@ -43,7 +43,7 @@
 		<div class="col-lg-9">
 			<div id="search-bar" class=" mt-4 mb-2">
 				<div class="input-group">
-					<input type="text" name="search" id="search" class="form-control" placeholder="Search Product..."/>
+					<input type="text" name="search" id="search" class="form-control" placeholder="Pencarian..."/>
 					<span class="input-group-btn">
 						<button class="btn btn-primary" type="button">
 							<i class="fa fa-search"></i>
@@ -98,7 +98,7 @@
 									<a href="<?= base_url(); ?>index.php/Shop/product/<?= $product->product_id; ?>"><?= $product->product_name; ?></a>
 								</h5>
 								<h6>
-									B$ <?= $product->price; ?>
+									Rp. <?= $product->price; ?>
 								</h6>
 								<p class="card-text"><?= $product->short_desc; ?></p>
 							</div>
@@ -110,7 +110,7 @@
 								<br>
 								<button class="pull-right btn btn-block btn-primary" type="button" onclick="addToCart(<?= $product->product_id; ?>)">
 									<span class="fa fa-shopping-cart pull-left"></span>
-									Add to cart 		
+									Tambahkan ke keranjang 		
 								</button>
 								<!-- <?= form_close(); ?> -->
 							</div>

@@ -26,7 +26,7 @@
           </div>
           <div class="form-group">
             <label for="dispname">Nama Perusahaan</label>
-            <input class="form-control" id="pname" name="pname" type="text" aria-describedby="emailHelp" placeholder="Nama Perusahaan" value="<?= $userData->p_name; ?>">
+            <input class="form-control" id="Pname" name="Pname" type="text" aria-describedby="emailHelp" placeholder="Nama Perusahaan" value="<?= $userData->perusahaan_name; ?>">
           </div>
             <div class="form-group">
             <label for="email">Email Perusahaan</label>
