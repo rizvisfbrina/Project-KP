@@ -40,7 +40,7 @@
 				$.get("<?= site_url('Product/selectProductCategory')?>", { 'categoryID' : categoryID }, function(data){
 
 					console.log(data);
-					var string = "<h4>Search result for category \""+categoryName+"\"...</h4>";
+					var string = "<h4>Hasil pencarian \""+categoryName+"\"...</h4>";
 					string += "<div class='row'>";
 					for(var i = 0; i < data.length; i++) {
 						string += "<div class='col-lg-4 col-md-6 mb-4'>"
@@ -77,7 +77,7 @@
 								$("#search").keyup(function() {
 									var search = $("#search").val();
 									$.get("<?php echo base_url(); ?>index.php/Product/searchActiveProduct", { 'search' : search }, function(data) {
-										var string = "<h4>Search result for "+search+"...</h4>";
+										var string = "<h4>Hasil pencarian "+search+"...</h4>";
 										string += "<div class='row'>";
 										for(var i = 0; i < data.length; i++) {
 											string += "<div class='col-lg-4 col-md-6 mb-4'>"

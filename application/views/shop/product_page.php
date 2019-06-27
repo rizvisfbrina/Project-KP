@@ -20,7 +20,7 @@
 							<br>
 							<button class="pull-right btn btn-block btn-primary" type="button" onclick="addToCart(<?= $product->product_id; ?>)">
 								<span class="fa fa-shopping-cart pull-left"></span>
-								Tambahkan ke keranjang 		
+								Tambah ke keranjang 		
 							</button>
 							<!-- <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
 							4.0 stars -->

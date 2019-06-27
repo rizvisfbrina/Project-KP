@@ -110,7 +110,7 @@
 								<br>
 								<button class="pull-right btn btn-block btn-primary" type="button" onclick="addToCart(<?= $product->product_id; ?>)">
 									<span class="fa fa-shopping-cart pull-left"></span>
-									Tambahkan ke keranjang 		
+									Tambah ke keranjang 		
 								</button>
 								<!-- <?= form_close(); ?> -->
 							</div>
