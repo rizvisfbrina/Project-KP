@@ -45,9 +45,9 @@
                       Jumlah : <?= $cart->quantity;?>
                     </td>
                     <td rowspan=1 align="left" >
-                      Harga : Rp <?= number_format ( $cart->price * $cart->quantity, 2 );?>
+                      Harga : Rp <?= number_format ( $cart->price * $cart->quantity, 0 );?>
                       <br>
-                      Pajak : Rp <?= number_format ( $cart->price * $cart->quantity, 2 );?>
+                      Pajak : Rp <?= number_format ( 0.1 * $cart->price * $cart->quantity, 0 );?>
                     </td>
                     <td rowspan=2>
                       <button data-toggle="modal" data-target="#cartmodal" class="btn-sm btn-danger passID" data-id="<?= $cart->product_cart_id; ?>" onclick="passID(<?= $cart->product_cart_id; ?>)"> x </button>
@@ -58,8 +58,9 @@
                 <?php
                   endforeach;
                 ?>
-                <tr><td colspan=3></td><th colspan=1>Total Harga :</th><th colspan='2'> Rp. <?= number_format( $totalPrice, 2); ?></th></tr>
-                <?php else: ?>
+                <tr><td colspan=3></td><th colspan=1>Total Harga :</th><th colspan='2'> Rp <?= number_format( $totalPrice, 0); ?></th></tr>
+   
+               <?php else: ?> -->
                 <tr align="center"><td>Keranjang anda kosong</td></tr>
                  <?php endif; ?>
               </tbody>

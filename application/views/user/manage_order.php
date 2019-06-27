@@ -35,7 +35,7 @@
                 <?php $count = 1; foreach($orders as $order): ?>
                   <tr align="center">
                     <td><?= $count++;?></td>
-                    <td>$ <?= number_format ( $order->totalPrice, 2  );  ?></td>
+                    <td>Rp <?= number_format ( $order->totalPrice, 0 );  ?></td>
                     <td><?= date_format(date_create($order->date_buy), "d M Y H:i"); ?></td>
                     <td><a href="<?= site_url('user/view_order/'.$order->cart_id)?>">Lihat Pesanan</a></td>
                   </tr>
