@@ -98,14 +98,14 @@
 									<a href="<?= base_url(); ?>index.php/Shop/product/<?= $product->product_id; ?>"><?= $product->product_name; ?></a>
 								</h5>
 								<h6>
-									Rp. <?= $product->price; ?>
+									Rp <?= $product->price; ?>
 								</h6>
 								<p class="card-text"><?= $product->short_desc; ?></p>
 							</div>
 							<div class="card-footer">
 								<!-- <?= form_open(site_url('cart/addToCart'), array( "id" => "addToCart_$product->product_id")); ?> -->
 								<!-- <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> -->
-								<input type="number" name="quantity" class="form-control" placeholder="Quantity" id="quantity_<?= $product->product_id; ?>" />
+								<input type="number" name="quantity" class="form-control" placeholder="Jumlah" id="quantity_<?= $product->product_id; ?>" />
 								<input type="hidden" name="product_id" class="form-control" value="<?= $product->product_id; ?>"/>
 								<br>
 								<button class="pull-right btn btn-block btn-primary" type="button" onclick="addToCart(<?= $product->product_id; ?>)">
