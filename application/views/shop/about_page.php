@@ -1,5 +1,5 @@
 <div class="jumbotron center" style="min-height: 350px; background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(<?= base_url('style/assets/images/headline/bg-33.jpg')?>) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;">
-	<h1 class="text-center display-1 pt-5" style="color: white;">All About Us.</h1> 
+	<h1 class="text-center display-1 pt-5" style="color: white;">Tentang Kami.</h1> 
 </div>
 
 <div class="container">

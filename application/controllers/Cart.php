@@ -19,7 +19,7 @@ class CART extends CI_Controller {
         $product_id = $_POST['product_id'];
         $quantity = $_POST['quantity'];
         if ($this->session->userdata('usertype') != 'user' && $this->session->userdata('usertype') != 'admin') {
-            $message = "Perlu login!";
+            $message = "Anda harus login terlebih dahulu!";
             $array = array("success" => false, "message" => $message, "title" => "Warning!");
         } 
         elseif ($this->session->userdata('usertype') == 'admin') {

@@ -81,13 +81,13 @@
 							</a>
 						</li>
 						<li class="nav-item <?= $about; ?>">
-							<a class="nav-link" href="<?= site_url('shop/about');?>"><b>Tentang Kami</b></a>
+							<a class="nav-link" href="<?= site_url('shop/about');?>"><b>Tentang</b></a>
 						</li>
 						<!-- <li class="nav-item">
 							<a class="nav-link" href="#">Services</a>
 						</li> -->
 						<li class="nav-item <?= $contact; ?>">
-							<a class="nav-link" href="<?= site_url('shop/contact');?>"><b>Hubungi Kami</b></a>
+							<a class="nav-link" href="<?= site_url('shop/contact');?>"><b>Kontak</b></a>
 						</li>
 						<li class="nav-item">
 							<?php 	if ($this->session->userdata('usertype') == "admin") : ?>
