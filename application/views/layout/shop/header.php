@@ -76,28 +76,28 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item <?= $home; ?>">
-							<a class="nav-link" href="<?= site_url('shop'); ?>"><b>Home</b>
+							<a class="nav-link" href="<?= site_url('shop'); ?>"><b>Beranda</b>
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item <?= $about; ?>">
-							<a class="nav-link" href="<?= site_url('shop/about');?>"><b>About</b></a>
+							<a class="nav-link" href="<?= site_url('shop/about');?>"><b>Tentang Kami</b></a>
 						</li>
 						<!-- <li class="nav-item">
 							<a class="nav-link" href="#">Services</a>
 						</li> -->
 						<li class="nav-item <?= $contact; ?>">
-							<a class="nav-link" href="<?= site_url('shop/contact');?>"><b>Contact</b></a>
+							<a class="nav-link" href="<?= site_url('shop/contact');?>"><b>Hubungi Kami</b></a>
 						</li>
 						<li class="nav-item">
 							<?php 	if ($this->session->userdata('usertype') == "admin") : ?>
-								<li class="nav-item"><a class="nav-link" href="<?php echo base_url()?>index.php/admin"><b>Admin Dashboard</b></a></li>
-								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Log Out</button></a></li>
+								<li class="nav-item"><a class="nav-link" href="<?php echo base_url()?>index.php/admin"><b>Dashboard Admin</b></a></li>
+								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Keluar</button></a></li>
 							<?php elseif ($this->session->userdata('usertype') == "user") : ?>
-								<li class="nav-item"><a class="nav-link"  href="<?php echo base_url()?>index.php/user/dashboard"><b>Your Profile</b></a></li>
-								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Log Out</button></a></li>
+								<li class="nav-item"><a class="nav-link"  href="<?php echo base_url()?>index.php/user/dashboard"><b>Profil</b></a></li>
+								<li class="nav-item"><a class="nav-link" style="margin-left:5px" data-toggle="modal" data-target="#logout"><button class="btn btn-danger py-1">Keluar</button></a></li>
 							<?php else : ?>
-								<a class="nav-link" href="<?php echo base_url()?>index.php/Account"><button class="btn btn-success py-1">Log In</button></a>
+								<a class="nav-link" href="<?php echo base_url()?>index.php/Account"><button class="btn btn-success py-1">Masuk</button></a>
 							<?php endif; ?>
 						</li>
 					</ul>

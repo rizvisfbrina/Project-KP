@@ -45,15 +45,15 @@
                 <input class="form-control" id="password" name="password" type="password" placeholder="Password">
               </div>
               <div class="col-md-6">
-                <label for="confPassword">Confirm password</label>
-                <input class="form-control" id="confPassword" name="confPassword" type="password" placeholder="Confirm password">
+                <label for="confPassword">Konfirmasi Password</label>
+                <input class="form-control" id="confPassword" name="confPassword" type="password" placeholder="Konfirmasi Password">
               </div>
             </div>
           </div>
           <input type="submit" name="submit" value="Register" class="btn btn-primary btn-block"/>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="<?php echo base_url('index.php/account');?>">Login Page</a>
+          <a class="d-block small mt-3" href="<?php echo base_url('index.php/account');?>">Halaman Login</a>
           <!-- <a class="d-block small" href="forgot-password.html">Forgot Password?</a> -->
         </div>
       </div>

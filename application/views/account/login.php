@@ -7,23 +7,23 @@
 				<?php echo form_open('account/loggingIn'); ?>
 					<div class="form-group">
 						<label for="exampleInputEmail1">Username</label>
-						<input class="form-control" id="username" name="username" type="text" placeholder="Enter Username" required>
+						<input class="form-control" id="username" name="username" type="text" placeholder="Masukkan Username" required>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label>
-						<input class="form-control" id="password" name="password" type="password" placeholder="Enter Password" required>
+						<input class="form-control" id="password" name="password" type="password" placeholder="Masukkan Password" required>
 					</div>
 					<div class="form-group">
 						<div class="form-check">
 							<label class="form-check-label">
-								<input class="form-check-input" type="checkbox"> Remember Password</label>
+								<input class="form-check-input" type="checkbox"> Ingat Password</label>
 						</div>
 					</div>
-					<button class="btn btn-primary btn-block" type="submit">Login</button>
+					<button class="btn btn-primary btn-block" type="submit">Masuk</button>
 				</form>
 				<div class="text-center">
-					<a class="d-block small mt-3" href="<?php echo base_url('index.php/account/register');?>">Register an Account</a>
-					<a class="d-block small mt-3" href="<?php echo base_url('index.php/shop/index');?>">Back to home</a>
+					<a class="d-block small mt-3" href="<?php echo base_url('index.php/account/register');?>">Halaman Registrasi</a>
+					<a class="d-block small mt-3" href="<?php echo base_url('index.php/shop/index');?>">Kembali ke Website</a>
 					<!-- <a class="d-block small" href="forgot-password.html">Forgot Password?</a> -->
 				</div>
 			</div>

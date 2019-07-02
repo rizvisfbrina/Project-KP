@@ -37,10 +37,10 @@ class Account extends CI_Controller {
 			'FName', 'Nama Depan',
 			'trim|required|min_length[5]|max_length[20]|alpha',
 			array(
-				'required' => 'You have not provided %s.',
-				'min_length' => 'Your {field} needs to be at least {param} characters long',
-				'max_length' => 'Your {field} needs to be at most {param} characters long',
-				'alpha' => 'You may only use alphabet in your {field}'
+				'required' => 'Anda belum mengisi %s.',
+				'min_length' => ' {field} berisi minimal sebanyak {param} karakter.',
+				'max_length' => ' {field} berisi maksimal sebanyak {param} karakter.',
+				'alpha' => 'Anda hanya boleh menggunakan huruf untuk pengisian {field}'
 			)
 		);
 
@@ -48,50 +48,48 @@ class Account extends CI_Controller {
 			'LName', 'Nama Belakang',
 			'trim|required|min_length[5]|max_length[20]|alpha',
 			array(
-				'required' => 'You have not provided %s.',
-				'min_length' => 'Your {field} needs to be at least {param} characters long',
-				'max_length' => 'Your {field} needs to be at most {param} characters long',
-				'alpha' => 'You may only use alphabet in your {field}'
+				'required' => 'Anda belum mengisi %s.',
+				'min_length' => '{field} berisi minimal sebanyak {param} karakter.',
+				'max_length' => '{field} berisi maksimal sebanyak {param} karakter.',
+				'alpha' => 'Anda hanya boleh menggunakan huruf untuk pengisian {field}'
 			)
 		);
 
 		$this->form_validation->set_rules(
 			'PName', 'Nama Perusahaan',
-			'trim|required|min_length[5]|max_length[20]|alpha',
+			'trim|required|min_length[5]|max_length[20]',
 			array(
-				'required' => 'You have not provided %s.',
-				'min_length' => 'Your {field} needs to be at least {param} characters long',
-				'max_length' => 'Your {field} needs to be at most {param} characters long',
-				'alpha' => 'You may only use alphabet in your {field}'
+				'required' => 'Anda belum mengisi %s.',
+				'min_length' => '{field} berisi minimal sebanyak {param} karakter.',
+				'max_length' => '{field} berisi maksimal sebanyak {param} karakter.'
 			)
 		);
 	
 		$this->form_validation->set_rules('email', 'Email Perusahaan', 'trim|required|is_unique[user_table.email]|valid_email', 
 			array(
-			'required' => 'You have not provided %s.',
-			'is_unique' => 'This %s already exists.',
-			'valid_email' => 'You did not provide a valid E-Mail Address'
+			'required' => 'Anda belum mengisi %s.',
+			'is_unique' => ' %s ini telah digunakan.',
+			'valid_email' => 'Alamat email tidak valid!'
 			)
 		);
 
 		$this->form_validation->set_rules(
 			'username', 'Username',
-			'trim|required|min_length[5]|max_length[12]|is_unique[user_table.username]|alpha',
+			'trim|required|min_length[5]|max_length[12]|is_unique[user_table.username]',
 			array(
-				'required' => 'You have not provided %s.',
-				'is_unique' => 'This %s already exists.',
-				'alpha' => 'You may only use alphabet and numbers for your username'
+				'required' => 'Anda belum mengisi %s.',
+				'is_unique' => ' %s telah digunakan.'
 			)
 		);
 
 		$this->form_validation->set_rules('password', 'Password', 'trim|required',
 			array(
-				'required' => 'You must provide a %s.'
+				'required' => 'Anda harus mengisi %s.'
 			)
 		);
 
-		$this->form_validation->set_rules('confPassword', 'Password Confirmation', 'trim|required|matches[password]',
-			array('required' => 'You must provide a %s.')
+		$this->form_validation->set_rules('confPassword', 'Konfirmasi Password', 'trim|required|matches[password]',
+			array('required' => 'Anda harus mengisi %s.')
 		);
 
 		if ($this->form_validation->run() == FALSE) {
@@ -116,10 +114,10 @@ class Account extends CI_Controller {
 			);
 
 			if ($this->account_model->register($array)){
-				$this->session->set_flashdata('fail', '<div class="alert alert-success" style="margin-top:10px" role="alert"> Account Registered Successfully!</div>'); 
+				$this->session->set_flashdata('fail', '<div class="alert alert-success" style="margin-top:10px" role="alert"> Registrasi berhasil!</div>'); 
 				redirect('account');
 			} else {
-				$this->session->set_flashdata('register', '<div class="alert alert-danger" style="margin-top:10px" role="alert">Failed to register account!</div>'); 
+				$this->session->set_flashdata('register', '<div class="alert alert-danger" style="margin-top:10px" role="alert">Gagal registrasi!</div>'); 
 				redirect('account/register');
 			}
 		}
@@ -140,19 +138,19 @@ class Account extends CI_Controller {
 		$result = $this->account_model->login($data);
 		if ($result == "user") {
 			$this->session->set_flashdata('success', '<div class="alert alert-primary mt-4"role="alert">
-  				You have successfully logged in as <span href="#" class="alert-link">'.$username.'</span>. Happy browsing.</div>'); 
+  				Anda berhasil masuk sebagai <span href="#" class="alert-link">'.$username.'</span>. </div>'); 
 			redirect('shop');
 		} else if ($result == "admin") {
 			$this->session->set_flashdata('success', '<div class="alert alert-primary mt-4" role="alert">
-  				You have successfully logged in as <span href="#" class="alert-link">'.$username.'</span>. You are the Admin.</div>'); 
+  				Anda berhasil masuk sebagai <span href="#" class="alert-link">'.$username.'</span>. Anda adalah admin.</div>'); 
 			redirect('Admin');
 		} else if ($result == "ban") {
 			$this->session->set_flashdata('success', '<div class="alert alert-danger mt-4" role="alert">
-  				You are banned from this website.</div>'); 
+  				Anda tidak dapat mengakses website ini!</div>'); 
 			redirect('shop');
 		} else {
 			$this->session->set_flashdata('fail', '<div class="alert alert-danger mt-4" role="alert">
-  				Login failed.</div>'); 
+  				Gagal masuk!</div>'); 
 			redirect('account');
 		}
 	}

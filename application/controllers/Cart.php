@@ -19,11 +19,11 @@ class CART extends CI_Controller {
         $product_id = $_POST['product_id'];
         $quantity = $_POST['quantity'];
         if ($this->session->userdata('usertype') != 'user' && $this->session->userdata('usertype') != 'admin') {
-            $message = "Need to login first!";
+            $message = "Perlu login!";
             $array = array("success" => false, "message" => $message, "title" => "Warning!");
         } 
         elseif ($this->session->userdata('usertype') == 'admin') {
-            $message = "You are the admin!";
+            $message = "Anda adalah admin!";
             $array = array("success" => false, "message" => $message, "title" => "Warning!");
          }else {
             if ($this->cart_model->hasActiveCart()) {
@@ -33,14 +33,14 @@ class CART extends CI_Controller {
             }
             $insert = $this->cart_model->addProductToCart($cart_id, $product_id, $quantity);
             if ($insert) {
-                $message = "Add product successfully";
+                $message = "Berhasil menambahkan produk!";
                 $array = array (
                     "success" => true,
                     "message" => $message,
-                    "title" => "Success!"
+                    "title" => "Berhasil!"
                 );
             } else {
-                $message = "Fail to add product";
+                $message = "Gagal menambahkan produk!";
                 $array = array (
                     "success" => false,
                     "message" => $message,
@@ -56,8 +56,8 @@ class CART extends CI_Controller {
     public function removeFromCart() {
         $pcid = $this->input->post('productCartId');
         $succ = $this->cart_model->removeFromCart($pcid);
-        if ($succ) $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> Item removed from your cart. </div>';
-        else $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Failed to remove item from your cart. </div>';       
+        if ($succ) $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> Produk berhasil dihapus dari keranjang. </div>';
+        else $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Gagal menghapus produk dari keranjang. </div>';       
 
         $this->session->set_flashdata('msg', $message);
         redirect('user/your_cart');
@@ -79,12 +79,12 @@ class CART extends CI_Controller {
         $products = $this->cart_model->getProductsInCart($cartid);
         $count = count($products);
         if ($count == 0) {
-            $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> You have No products in your cart. </div>'; 
+            $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Tidak ada produk di keranjang Anda. </div>'; 
             $this->session->set_flashdata('msg', $message);
             redirect('user/your_cart');
         } else {
             $this->cart_model->buyCart($cartid);
-            $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> You have purchased your cart. </div>'; 
+            $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> Berhasil membeli produk di keranjang. </div>'; 
             $this->session->set_flashdata('msg', $message);
             redirect('user/your_cart');
         }
