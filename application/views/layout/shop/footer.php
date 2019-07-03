@@ -20,7 +20,7 @@
 
 	
 		<!-- Footer -->
-		<footer class="py-5 mt-5 bg-dark">
+		<footer class="py-5 mt-5" style="background-color: #116185;">
 			<div class="container">
 				<p class="m-0 text-center text-white">Copyright &copy; PT Pelindo Daya Sejahtera 2019</p>
 			</div>
@@ -60,7 +60,7 @@
 									+ "<input type='number' name='quantity' class='form-control' placeholder='Quantity' id='quantity_"+data[i]['product_id']+"' />"
 									+ "<input type='hidden' name='product_id' class='form-control' value='"+data[i]['product_id']+"'/>"
 									+ "<br>"
-									+ "<button class='pull-right btn btn-block btn-primary' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
+									+ "<button style='background-color: #116185; color: white' class='pull-right btn btn-block' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
 										+ "<span class='fa fa-shopping-cart pull-left'></span>"
 										+ "Tambah ke keranjang" 		
 									+ "</button>"
@@ -97,7 +97,7 @@
 													+ "<input type='number' name='quantity' class='form-control' placeholder='Jumlah' id='quantity_"+data[i]['product_id']+"' />"
 													+ "<input type='hidden' name='product_id' class='form-control' value='"+data[i]['product_id']+"'/>"
 													+ "<br>"
-													+ "<button class='pull-right btn btn-block btn-primary' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
+													+ "<button style='background-color: #116185; color: white' class='pull-right btn btn-block' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
 														+ "<span class='fa fa-shopping-cart pull-left'></span>"
 														+ "Tambah ke keranjang" 		
 													+ "</button>"

@@ -108,7 +108,7 @@
 								<input type="number" name="quantity" class="form-control" placeholder="Jumlah" id="quantity_<?= $product->product_id; ?>" />
 								<input type="hidden" name="product_id" class="form-control" value="<?= $product->product_id; ?>"/>
 								<br>
-								<button class="pull-right btn btn-block btn-primary" type="button" onclick="addToCart(<?= $product->product_id; ?>)">
+								<button style="background-color: #116185; color: white" class="pull-right btn btn-block" type="button" onclick="addToCart(<?= $product->product_id; ?>)">
 									<span class="fa fa-shopping-cart pull-left"></span>
 									Tambah ke keranjang 		
 								</button>
