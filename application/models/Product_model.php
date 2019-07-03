@@ -239,11 +239,11 @@ class Product_model extends CI_Model {
 		@return PHP Object of product review
 	*/
 	
-	public function getProductReview($product_id) {
-		return $this->db
-		->join('user_table ut', 'ut.user_id=rt.user_id')
-		->get_where('review_table rt', array('product_id' => $product_id))->result();
-	}
+	// public function getProductReview($product_id) {
+	// 	return $this->db
+	// 	->join('user_table ut', 'ut.user_id=rt.user_id')
+	// 	->get_where('review_table rt', array('product_id' => $product_id))->result();
+	// }
 	
 	/** 
 		Add review to a product
@@ -253,9 +253,9 @@ class Product_model extends CI_Model {
 		@return boolean
 	*/
 	
-	public function addProductReview($data) {
-		return $this->db->insert('review_table', $data);
-	}
+	// public function addProductReview($data) {
+	// 	return $this->db->insert('review_table', $data);
+	// }
 	
 	/** 
 		Get product count

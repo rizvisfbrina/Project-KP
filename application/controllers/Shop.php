@@ -68,7 +68,7 @@ class Shop extends CI_Controller {
 	public function product($product_id) {
 		$data["product_id"] = $product_id;
 		$product = $data['product'] = $this->product_model->getProduct($product_id)->row();
-		$data['reviews'] = $this->product_model->getProductReview($product_id);
+		// $data['reviews'] = $this->product_model->getProductReview($product_id);
 		$active = array(
 			"home" => null,
 			"about" => null,
@@ -126,8 +126,8 @@ class Shop extends CI_Controller {
 			'e-mail', 'E-Mail',
 			'required|valid_email',
 			array(
-				'required' => $this->dangerAlert('You have not provided your %s.'),
-				'valid_email' => $this->dangerAlert('You did not provide a valid E-Mail Address')
+				'required' => $this->dangerAlert('Anda belum mengisi %s.'),
+				'valid_email' => $this->dangerAlert('Email tidak valid.')
 			)
 		);
 
@@ -135,9 +135,9 @@ class Shop extends CI_Controller {
 			'message', 'Message',
 			'required|min_length[30]|max_length[500]',
 			array(
-				'required' => $this->dangerAlert('You have not provided your %s.'),
-				'max_length' => $this->dangerAlert('Your {field} must not exceeds {param} characters long'),
-				'min_length' => $this->dangerAlert('Your {field} must be at least {param} characters long')
+				'required' => $this->dangerAlert('Anda belum mengisi %s.'),
+				'max_length' => $this->dangerAlert(' {field} harus berisi minimal sebanyak {param} karakter.'),
+				'min_length' => $this->dangerAlert(' {field} harus berisi maksimal sebanyak {param} karakter.')
 			)
 		);
 
@@ -149,9 +149,9 @@ class Shop extends CI_Controller {
 			$data['message'] = $this->input->post('message');
 			$insert = $this->contact_model->addMessage($data);
 			if ($insert) {
-				$message = $this->successAlert('You have submitted a message!');
+				$message = $this->successAlert('Pesan Anda telah terkirim!');
 			} else {
-				$message = $this->dangerAlert('Fail to submit a message');
+				$message = $this->dangerAlert('Gagal mengirim pesan!');
 			}
 			$this->session->set_flashdata('message', $message);
 			redirect('shop/contact');
