@@ -167,9 +167,7 @@ class Admin extends My_Controller {
 		$data['cart'] = $this->cart_model->getCartDetail($cart_id);
 		$data['products'] = $this->cart_model->getProductsInCart($cart_id);
 		$data['totalPrice'] = $this->cart_model->getTotalCartPrice($cart_id);
-		// header('Access-Control-Allow-Origin: *');
-		// header('Content-Type: application/json');
-		// echo json_encode($data);
+		
 		$this->load->view('layout/dashboard/header', array("title" => "View Cart"));
 		$this->loadSidebar("show_order", "manage_cart_active");
 		$this->load->view("admin/view_cart", $data);

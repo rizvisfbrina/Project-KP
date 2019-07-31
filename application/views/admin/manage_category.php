@@ -7,19 +7,19 @@
 				<a href="<?= site_url('admin');?>">Dashboard</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="<?= site_url('admin/view_category');?>">Category Listing</a>
+				<a href="<?= site_url('admin/view_category');?>">Daftar Kategori</a>
 			</li>
-			<li class="breadcrumb-item active">Manage Category</li>
+			<li class="breadcrumb-item active">Kelola Kategori</li>
 		</ol>
 		<!-- Example DataTables Card-->
 		<?= form_open('category/update/'.$category_id, array('class' => 'form-horizontal')) ?>
 		<div class="card mb-3">
 			<div class="card-header">
-				Edit Category 
+				Edit Kategori 
 			</div>
 			<div class="card-body">
 				<div class="form-group">
-					<label class="control-label">Category Name</label>
+					<label class="control-label">Nama Kategori</label>
 					<div>
 						<input id="category_name" type="text" class="form-control" name="category_name" value="<?= $category->category_name; ?>">
 						<input id="original_category_name" type="hidden" class="form-control" name="original_category_name" value="<?= $category->category_name; ?>">
@@ -27,10 +27,10 @@
 				</div>
 
 				<div class="form-group">
-					<label class="control-label">Parent Category</label>
+					<label class="control-label">Kategori Awal</label>
 					<div>
 						<select id="parent_category_id" type="text" class="form-control" name="parent_category_id">
-							<option value="0" <?php if ($category->parent_category_id == 0){echo "selected";}?>>No Parent</option>
+							<option value="0" <?php if ($category->parent_category_id == 0){echo "selected";}?>>Tidak Ada</option>
 							<?php 
 								foreach($parent_categories as $cat):
 							?>
@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Update" Class="btn btn-primary form-control">
+					<input type="submit" value="Edit" Class="btn btn-primary form-control">
 				</div>
 			</div>
 		</div>
@@ -52,18 +52,18 @@
 		<!-- View Product Card-->
 		<div class="card mb-3">
 			<div class="card-header">
-				<i class="fa fa-tags"></i> <?= $category->category_name; ?> List </div>
+				<i class="fa fa-tags"></i> Daftar <?= $category->category_name; ?> </div>
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<thead>
 							<tr>
-								<th width="10%">N0</th>
-								<th width="20%">Product Name</th>
-								<th width="10%">Price</th>
-								<th width="20%">Description</th>
-								<th width="20%">Category</th>
-								<th width="10%">Options</th>
+								<th width="5%">No</th>
+								<th width="20%">Nama Jasa</th>
+								<th width="20%">Harga</th>
+								<th width="20%">Deskripsi</th>
+								<th width="20%">Kategori</th>
+								<th width="15%">Opsi</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -71,24 +71,24 @@
 									<tr>
 										<td><?= $count++; ?></td>
 										<td><?= $pl->product_name ?></td>
-										<td>$ <?= $pl->price ?></td>
+										<td>Rp <?= number_format ( $pl->price, 2 );?></td>
 										<td><?= $pl->short_desc ?></td>
 										<td><?= $pl->category_name ?></td>
 										<td>
 											<a href='<?= site_url('admin/edit_product/'.$pl->product_id)?>'>
-												<button class="btn btn-primary" style="width:100%">Edit</button>
+												<button class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
 											</a>
 											<?php if($pl->active_flag == 0): ?>
 												<a href='<?= site_url('product/changeActiveStatus/'.$pl->product_id).'/1'?>'>
-													<button class="btn btn-danger" style="width:100%" >Deactivate</button>
+													<button class="btn btn-danger btn-sm"><i class="fa fa-close"></i></button>
 												</a>
 											<?php elseif($pl->active_flag == 1): ?>
 												<a href='<?= site_url('product/changeActiveStatus/'.$pl->product_id).'/0'?>'>
-													<button class="btn btn-success" style="width:100%" >Re-activate</button>
+													<button class="btn btn-success btn-sm" ><i class="fa fa-check"></i></button>
 												</a>
 											<?php endif; ?>
 										</td>
-										</tr>
+									</tr>
 								<?php endforeach; ?>
 						</tbody>
 					</table>

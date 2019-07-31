@@ -20,7 +20,7 @@
 							<label for="total_price"><strong>Total Harga:</strong></label>
 						</div>
 						<div class="form-group col-xs-10 col-md-4">
-							<input type="text" class="form-control" name="f_name" value="$ <?= number_format( $totalPrice, 0 ); ?>" disabled/>
+							<input type="text" class="form-control" name="f_name" value="Rp <?= number_format( $totalPrice, 2 ); ?>" disabled/>
 						</div>
 					</div>
 				</div>
@@ -43,8 +43,8 @@
 					</div>
 					<div class="row">
 						<div class="form-group col-md-6">
-							<label for="country">Provinsi</label>
-							<input type="text" class="form-control" name="country" value="<?= $shipping_address['country']?>">
+							<label for="province">Provinsi</label>
+							<input type="text" class="form-control" name="province" value="<?= $shipping_address['province']?>">
 						</div>
 						<div class="form-group col-md-6">
 							<label for="postcode">Kode Pos:</label>

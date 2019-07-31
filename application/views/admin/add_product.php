@@ -6,19 +6,19 @@
       <li class="breadcrumb-item">
         <a href="<?= site_url('admin');?>">Dashboard</a>
       </li>
-      <li class="breadcrumb-item active">Add Product</li>
+      <li class="breadcrumb-item active">Tambah Jasa</li>
     </ol>
     <!-- Example DataTables Card-->
     <?= form_open_multipart('product/add', array('class' => 'form-horizontal')) ?>
     <div class="card mb-3">
       <div class="card-header">
-        Add Product 
+        Tambah Jasa 
       </div>
 
       <div class="card-body">
         <div class="form-group">
           <?php if(isset($image_error)) {echo $image_error; }?>
-          <label class="control-label">Image</label>
+          <label class="control-label">Gambar</label>
           <div class="row">
             <div class="col-md-4">
               <img src="<?= base_url('style/assets/images/no_image.png')?>" id="product_image" name="product_image" class="img-thumbnail">
@@ -29,7 +29,7 @@
 
         <div class="form-group">
           <?= form_error('product_name'); ?>
-          <label class="control-label">Product Name</label>
+          <label class="control-label">Nama Jasa</label>
           <div>
             <input id="product_name" type="text" class="form-control" name="product_name" value="<?php echo set_value('product_name'); ?>">
           </div>
@@ -37,7 +37,7 @@
 
         <div class="form-group">
           <?= form_error('product_price'); ?>
-          <label class="control-label">Product Price</label>
+          <label class="control-label">Harga</label>
           <div>
             <input id="product_price" type="text" class="form-control" name="product_price" value="<?php echo set_value('product_price'); ?>">
           </div>
@@ -45,7 +45,7 @@
 
         <div class="form-group">
           <?= form_error('product_short_description'); ?>
-          <label class="control-label">Product Short Description</label>
+          <label class="control-label">Deskripsi Singkat</label>
           <div>
             <input id="product_short_description" type="text" class="form-control" name="product_short_description" value="<?php echo set_value('product_short_description'); ?>">
           </div>
@@ -53,14 +53,14 @@
 
         <div class="form-group">
           <?= form_error('product_description'); ?>
-          <label class="control-label">Product Long Description</label>
+          <label class="control-label">Deskripsi Detail</label>
           <div>
             <textarea id="textarea" name="product_description"></textarea>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="control-label">Product Category</label>
+          <label class="control-label">Kategori Jasa</label>
           <div>
             <select id="product_category" type="text" class="form-control" name="product_category">
               <?php 
@@ -76,7 +76,7 @@
         </div>
 
         <div class="form-group">
-          <input type="submit" value="Add" Class="btn btn-primary form-control">
+          <input type="submit" value="Tambah" class="btn btn-primary form-control">
         </div>
       </div>
     </div>

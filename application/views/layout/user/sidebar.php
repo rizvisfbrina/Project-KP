@@ -7,35 +7,35 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="<?php echo site_url('shop');?>">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">Kunjungi Website</span>
+            <span class="nav-link-text">Back to </span>
+            <i class="fa fa-fw fa-home"></i>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-user"></i>
-            <span class="nav-link-text">Kelola Profil</span>
+            <span class="nav-link-text"> Profil</span>
           </a>
           <ul class="sidenav-second-level collapse <?= $show_profile; ?>" id="collapseExamplePages">
             <li class="<?= $change_detail_active; ?>">
-              <a href="<?php echo site_url("user/change_details");?>">Ubah Detail</a>
+              <a href="<?php echo site_url("user/change_details");?>"> Ubah Profil</a>
             </li>
             <li class="<?= $change_password_active; ?>">
-              <a href="<?php echo site_url("user/change_password");?>">Ubah Password</a>
+              <a href="<?php echo site_url("user/change_password");?>"> Ubah Password</a>
             </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#product" data-parent="#exampleAccordion">
             <i class="fa fa-shopping-cart"></i>
-            <span class="nav-link-text">Pemesanan dan Keranjang</span>
+            <span class="nav-link-text"> Detail</span>
           </a>
           <ul class="sidenav-second-level collapse <?= $show_cart_order; ?>" id="product">
             <li class="<?= $your_cart_active; ?>">
-              <a href="<?php echo site_url("user/your_cart");?>">Keranjang</a>
+              <a href="<?php echo site_url("user/your_cart");?>"> Keranjang</a>
             </li>
             <li class="<?= $your_order_active; ?>">
-              <a href="<?php echo site_url("user/your_order");?>">Pemesanan</a>
+              <a href="<?php echo site_url("user/your_order");?>"> Pemesanan</a>
             </li>
           </ul>
         </li>
@@ -139,7 +139,7 @@
         </li>-->
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#logoutmodal">
-            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+            <i class="fa fa-sign-out"></i>Logout</a>
         </li>
       </ul>
     </div>

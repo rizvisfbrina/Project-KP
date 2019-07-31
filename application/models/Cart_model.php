@@ -190,13 +190,21 @@ class Cart_model extends CI_Model {
     
     public function getTotalCartPrice($cart_id) {
         $productsInCart = $this->getProductsInCart($cart_id);
+        $totalPrice1 = 0;
         $totalPrice = 0;
+        $totalTax = 0;
+
         foreach ($productsInCart as $product) {
-           $totalPrice += ( $product->price * $product->quantity );
+           $totalPrice1 += ( $product->price * $product->quantity );
+           $totalTax = ($totalPrice1 * 0.1);
+           $totalPrice = ($totalPrice1 + $totalTax);
+       
         }
         return $totalPrice;
     }
     
+
+    // 
     /**
         Get the cart detail
 

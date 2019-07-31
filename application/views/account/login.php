@@ -1,28 +1,47 @@
 <body style="min-height: 350px; background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(<?= base_url('style/assets/images/headline/bg-22.jpg')?>) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;">
 	<div class="container">
 		<?php echo $this->session->flashdata("fail"); ?>
-		<h1  class="text-center mt-5" style="color:white">Sign In</h1>
-		<div class="card card-login mx-auto mt-2">
+		<div class="wow bounceInUp">
 			<div class="card-body">
-				<?php echo form_open('account/loggingIn'); ?>
-					<div class="form-group">
-						<input class="form-control" id="username" name="username" type="text" placeholder="Username" required>
-					</div>
-					<div class="form-group">
-						<input class="form-control" id="password" name="password" type="password" placeholder="Password" required>
-					</div>
-					<div class="form-group">
-						<div class="form-check">
-							<label class="form-check-label">
-								<input class="form-check-input" type="checkbox">Ingat saya</label>
+				<div class="container">
+					<div class="text-center">
+				          <h3 class="white-text mt-5"><i class="fa fa-user white-text"></i>  Login</h3>
+				          <hr class="hr-light">
+				    </div>
+						
+					<div class="card-body">
+						<?php echo form_open('account/loggingIn'); ?>
+							<div class="form-group">
+								<div class="form-row md-form">
+								 <i class="fa fa-user prefix white-text active"></i>
+								 <label for="username" class="active">  Username</label>
+								<input class="white-text form-control" id="username" name="username" type="text" placeholder="Username" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-row md-form">
+								<i class="fa fa-lock prefix white-text active"></i>
+								<label for="password" class="active">  Nama Depan</label>
+								<input class="white-text form-control" id="password" name="password" type="password" placeholder="Password" required>
+								</div>
+							</div>
+						<!-- 	<div class="form-group">
+								<div class="form-row md-form">
+								<div class="form-check">
+									<label class="form-check-label" class="active">
+										<input class="form-check-input" type="checkbox">  Ingat saya</label>
+								</div>
+								</div>
+							</div> -->
+							<div row align="center">
+								<button class="btn btn-indigo" type="submit">Masuk</button>
+							</div>
+						</form>
+						<br><br>
+						<div class="text-center">
+							<h6 class="white-text">Belum punya akun?<a class="d-block small mt-3" href="<?php echo base_url('index.php/account/register');?>">Silakan Registrasi</a> </h6>
 						</div>
 					</div>
-					<button class="btn btn-primary btn-block" type="submit">Masuk</button>
-				</form>
-				<div class="text-center">
-					<a class="d-block small mt-3" href="<?php echo base_url('index.php/account/register');?>">Belum punya akun? Buat Akun disini</a>
-					<a class="d-block small mt-3" href="<?php echo base_url('index.php/shop/index');?>">Kembali ke Home</a>
-					<!-- <a class="d-block small" href="forgot-password.html">Forgot Password?</a> -->
 				</div>
 			</div>
 		</div>

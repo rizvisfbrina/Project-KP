@@ -25,20 +25,20 @@ class Category extends CI_Controller {
 			$is_unique = '';
 		}
 		$this->form_validation->set_rules(
-			'category_name', 'Category Name',
+			'category_name', 'Nama Kategori',
 			'required|min_length[5]|max_length[20]'.$is_unique,
 			array(
-				'required' => 'You have not provided %s.',
-				'is_unique' => 'This %s already exists.',
-				'min_length' => 'The {field} must be at least {param} characters long',
-				'max_length' => 'The {field} must be at most {param} characters long'
+				'required' => 'Anda belum mengisi %s.',
+				'is_unique' => ' %s telah digunakan.',
+				'min_length' => ' {field} setidaknya berisi {param} karakter.',
+				'max_length' => ' {field} maksimal berisi {param} karakter.'
 			)
 		);
 		if ($this->form_validation->run() == FALSE) {
 			$error = form_error('category_name');
 			$message = "<div class='alert alert-danger alert-dismissable'>";
 			$message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-			$message .= "<strong>Fail!</strong> $error";
+			$message .= "<strong>Gagal!</strong> $error";
 			$message .= "</div>";
 			$this->session->set_flashdata('msg', $message); 
 			redirect('admin/manage_category/'.$category_id);
@@ -49,12 +49,12 @@ class Category extends CI_Controller {
 			if ($update) {
 				$message = "<div class='alert alert-success alert-dismissable'>";
 				$message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-				$message .= "<strong>Success!</strong> $category_name is updated!";
+				$message .= "<strong>Berhasil!</strong> $category_name telah diubah!";
 				$message .= "</div>";
 			} else {
 				$message = "<div class='alert alert-danger alert-dismissable'>";
 				$message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-				$message .= "<strong>Fail!</strong> $category_name is not updated!";
+				$message .= "<strong>Gagal!</strong> $category_name tidak berhasil diubah!";
 				$message .= "</div>";
 			}
 			$this->session->set_flashdata('msg', $message); 
@@ -64,20 +64,20 @@ class Category extends CI_Controller {
 
 	public function add() {
 		$this->form_validation->set_rules(
-			'category_name', 'Category Name',
+			'category_name', 'Nama Kategori',
 			'required|min_length[5]|max_length[20]|is_unique[category_table.category_name]',
 			array(
-				'required' => 'You have not provided %s.',
-				'is_unique' => 'This %s already exists.',
-				'min_length' => 'The {field} must be at least {param} characters long',
-				'max_length' => 'The {field} must be at most {param} characters long'
+				'required' => 'Anda belum mengisi %s.',
+				'is_unique' => ' %s telah digunakan.',
+				'min_length' => ' {field} setidaknya berisi {param} karakter.',
+				'max_length' => ' {field} maksimal berisi {param} karakter.'
 			)
 		);
 		if ($this->form_validation->run() == FALSE) {
 			$error = form_error('category_name');
 			$message = "<div class='alert alert-danger alert-dismissable'>";
 			$message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-			$message .= "<strong>Fail!</strong> $error";
+			$message .= "<strong>Gagal!</strong> $error";
 			$message .= "</div>";
 			$this->session->set_flashdata('msg', $message); 
 			redirect('admin/add_category');
@@ -88,12 +88,12 @@ class Category extends CI_Controller {
 			if ($insert) {
 				$message = "<div class='alert alert-success alert-dismissable'>";
 				$message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-				$message .= "<strong>Success!</strong> $category_name is added!";
+				$message .= "<strong>Berhasil!</strong> $category_name telah ditambahkan!";
 				$message .= "</div>";
 			} else {
 				$message = "<div class='alert alert-danger alert-dismissable'>";
 				$message .= "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-				$message .= "<strong>Fail!</strong> Fail to add $category_name";
+				$message .= "<strong>Gagal!</strong> $category_name tidak berhasil ditambahkan!";
 				$message .= "</div>";
 			}
 			$this->session->set_flashdata('msg', $message); 

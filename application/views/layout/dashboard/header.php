@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title><?= $title; ?></title>
+  <link rel="icon" href="<?= base_url('style/assets/images/icon.png'); ?>" type="image/gif">
   <!-- Bootstrap core CSS-->
   <link href="<?php echo base_url();?>style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->

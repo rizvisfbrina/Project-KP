@@ -93,7 +93,7 @@ class Shop extends CI_Controller {
 		);
 		$active['about'] = "active";
 		$active['title'] = " - All About Us.";
-		$this->load->view('layout/shop/header', $active);
+		$this->load->view('shop/header-ctab', $active);
 		$this->load->view('shop/about_page');
 		$this->load->view('layout/shop/footer');
 	}
@@ -106,7 +106,7 @@ class Shop extends CI_Controller {
 		);
 		$active['contact'] = "active";
 		$active['title'] = " - Contact Us";
-		$this->load->view('layout/shop/header', $active);
+		$this->load->view('shop/header-ctab', $active);
 		$this->load->view('shop/contact');
 		$this->load->view('layout/shop/footer');
 	}

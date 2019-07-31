@@ -8,17 +8,17 @@
       <!-- Icon Cards-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-envelope"></i> Message List </div>
+          <i class="fa fa-envelope"></i> Daftar Pesan </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th width="25%">N0</th>
-                  <th width="25%">Full-Name</th>
-                  <th width="25%">E-Mail</th>
-                  <th width="25%">Time</th>
-                  <th width="25%">Option</th>
+                  <th width="10%">No</th>
+                  <th width="25%">Nama Lengkap</th>
+                  <th width="25%">Email</th>
+                  <th width="25%">Waktu</th>
+                  <th width="15%">Opsi</th>
                 </tr>
               </thead>
               <tbody>
@@ -32,7 +32,7 @@
                       </td>
                       <td>
                         <a href="<?= site_url('admin/read_message/'.$message->message_id)?>">
-                          <button class="btn btn-primary btn-block">Read</button>
+                          <button class="btn btn-primary btn-sm">Baca</button>
                         </a>
                       </td>
                     </tr>

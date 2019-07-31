@@ -47,10 +47,10 @@ class User_model extends CI_Model {
 		
 		if ($new == $renew && password_verify($old, $query->password)){
 			$this->db->where('user_id', $userid)->update(USER, $data);
-			$this->session->set_flashdata('msg','<div class="alert alert-primary" style="margin-top:5px" role="alert">Password changed.</div>');
+			$this->session->set_flashdata('msg','<div class="alert alert-primary" style="margin-top:5px" role="alert">Password berhasil diubah.</div>');
 			redirect(site_url('user/change_password'));
 		} else {
-			$this->session->set_flashdata('msg','<div class="alert alert-danger" style="margin-top:5px" role="alert">Password change failed.</div>');
+			$this->session->set_flashdata('msg','<div class="alert alert-danger" style="margin-top:5px" role="alert">Pengubahan password gagal!</div>');
 			redirect(site_url('user/change_password'));	
 		}
 		

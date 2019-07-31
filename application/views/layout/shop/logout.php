@@ -7,10 +7,10 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Anda yakin ingin keluar</div>
+            <div class="modal-body">Anda yakin ingin keluar?</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                <?php echo "<a class='btn btn-primary' href='".base_url()."index.php/Account/logout' >Logout</a>"; ?>
+                <?php echo "<a class='btn btn-danger' href='".base_url()."index.php/Account/logout' >Logout</a>"; ?>
             </div>
         </div>
     </div>

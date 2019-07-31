@@ -43,10 +43,10 @@
 				'fname', 'First Name',
 				'trim|required|min_length[5]|max_length[20]|alpha',
 				array(
-					'required' => 'You have not provided %s.',
-					'min_length' => 'Your {field} needs to be at least {param} characters long',
-					'max_length' => 'Your {field} needs to be at most {param} characters long',
-					'alpha-numeric' => 'You may only use alphabet in your {field}'
+					'required' => 'Anda belum mengisi %s.',
+					'min_length' => ' {field} harus berisi setidaknya {param} karakter.',
+					'max_length' => ' {field} berisi maksimal {param} karakter.',
+					'alpha' => ' {field} hanya boleh berisi huruf.'
 				)
 			);
 	
@@ -54,10 +54,10 @@
 				'lname', 'Last Name',
 				'trim|required|min_length[5]|max_length[20]|alpha',
 				array(
-					'required' => 'You have not provided %s.',
-					'min_length' => 'Your {field} needs to be at least {param} characters long',
-					'max_length' => 'Your {field} needs to be at most {param} characters long',
-					'alpha-numeric' => 'You may only use alphabet in your {field}'
+					'required' => 'Anda belum mengisi %s.',
+					'min_length' => '{field} harus berisi setidaknya {param} karakter.',
+					'max_length' => '{field} berisi maksimal {param} karakter.',
+					'alpha' => '{field} hanya boleh berisi huruf.'
 				)
 			);
 
@@ -71,8 +71,8 @@
 				'username', 'Username',
 				'required|min_length[5]|max_length[12]'.$uniqueUsername,
 				array(
-					'required' => 'You have not provided %s.',
-					'is_unique' => 'This %s already exists.'
+					'required' => 'Anda belum mengisi %s.',
+					'is_unique' => ' %s telah dipakai.'
 				)
 			);
 				
@@ -83,9 +83,9 @@
 			}
 			$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email'.$unique, 
 				array(
-					'required' => 'You have not provided %s.',
-					'is_unique' => 'This %s already exists.',
-					'valid_email' => 'You did not provide a valid E-Mail Address'
+					'required' => 'Anda belum mengisi %s.',
+					'is_unique' => ' %s telah dipakai.',
+					'valid_email' => 'Email tidak valid.'
 				)
 			);
 			
@@ -97,7 +97,7 @@
 				$data['last_name'] 	= $this->input->post('lname');
 				$data['username'] 	= $this->input->post('username');
 				$data['email'] 		= $this->input->post('email');
-				$message = 'Your account detail is successfully updated.';
+				$message = '<div class="alert alert-primary" style="margin-top:10px" role="alert">Detail akun berhasil diubah.</div>';
 				$this->session->set_flashdata('msg', $message); 
 				$this->user_model->update_userdetail($this->session->userdata('userid'), $data);
 				redirect(site_url('user/change_details'));
@@ -128,10 +128,18 @@
 			if ($cartExist) {
 				$cartid = $this->cart_model->getUserActiveCartID();
 				$cartData = $data['cartData'] = $this->cart_model->getProductsInCart($cartid);
+				$data['totalPrice1'] = 0;
+				$data['totalTax'] = 0;
 				$data['totalPrice'] = 0;
+			
+
 				foreach($cartData as $cart) {
-					$data['totalPrice'] += $cart->price * $cart->quantity;
+					$data['totalPrice1'] += $cart->price * $cart->quantity;
+					$data['totalTax'] = (0.1 * $data['totalPrice1']);
+					$data['totalPrice'] =  ($data['totalTax'] + $data['totalPrice1']);
+
 				}
+
 			}
 			$data['exist'] = $cartExist;
 			$this->load->view('layout/user/header', array('title' => 'Your Cart'));
@@ -147,13 +155,20 @@
 			$cartid = $this->cart_model->getUserActiveCartID();
 			$cartData = $data['cartData'] = $this->cart_model->getProductsInCart($cartid);
 			if (count($cartData) == 0) {
-				$message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> You have no products in your cart. Cannot proceed to checkout </div>'; 
+				$message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Keranjang Anda kosong! </div>'; 
 				$this->session->set_flashdata('msg', $message);
 				redirect('user/your_cart');
 			} else {
+
+				$data['totalPrice1'] = 0;
+				$data['totalTax'] = 0;
 				$data['totalPrice'] = 0;
+			
+
 				foreach($cartData as $cart) {
-					$data['totalPrice'] += $cart->price * $cart->quantity;
+					$data['totalPrice1'] += $cart->price * $cart->quantity;
+					$data['totalTax'] = (0.1 * $data['totalPrice1']);
+					$data['totalPrice'] =  ($data['totalTax'] + $data['totalPrice1']);
 				}
 				
 				$data['user'] = $this->user_model->get_userdetail($this->session->userdata('userid'))->row();
@@ -162,7 +177,7 @@
 					$data['shipping_address'] = array(
 						"address_id" => "",
 						"user_id" => "",
-						"country" => "",
+						"province" => "",
 						"postcode" => "",
 						"address" => "",
 						"town" => "",
@@ -199,10 +214,17 @@
 				$this->session->set_flashdata('message', $message);
 				redirect('user/your_order');
 			} else {
+
 				$cartData = $data['cartData'] = $this->cart_model->getProductsInCart($cartid);
+				$data['totalPrice1'] = 0;
+				$data['totalTax'] = 0;
 				$data['totalPrice'] = 0;
+			
+
 				foreach($cartData as $cart) {
-					$data['totalPrice'] += $cart->price * $cart->quantity;
+					$data['totalPrice1'] += $cart->price * $cart->quantity;
+					$data['totalTax'] = (0.1 * $data['totalPrice1']);
+					$data['totalPrice'] =  ($data['totalTax'] + $data['totalPrice1']);
 				}
 				$this->load->view('layout/user/header', array('title' => 'Your Cart'));
 				$this->loadUserSidebar('show_cart_order', 'your_order_active');
@@ -210,6 +232,7 @@
 				$this->load->view('layout/dashboard/logout');
 				$this->load->view('layout/user/cart_modal');
 				$this->load->view('layout/user/footer');
+
 			}
 			
 		}

@@ -8,7 +8,7 @@
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
 					<a class="nav-link" href="<?= site_url('shop'); ?>">
 						<i class="fa fa-fw fa-dashboard"></i>
-						<span class="nav-link-text">Kunjungi Website</span>
+						<span class="nav-link-text"> Go to website</span>
 					</a>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
@@ -25,11 +25,11 @@
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
 					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
 						<i class="fa fa-fw fa-gift"></i>
-						<span class="nav-link-text">Produk</span>
+						<span class="nav-link-text">Jasa</span>
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_product; ?>" id="collapseMulti3">
 						<li class="<?= $manage_product_active; ?>">
-							<a href="<?= site_url('admin/view_product'); ?>">Kelola</a>
+							<a href="<?= site_url('admin/view_product'); ?>">Edit</a>
 						</li>
 						<li class="<?= $add_product_active; ?>">
 							<a href="<?= site_url('admin/add_product'); ?>">Tambah</a>
@@ -43,7 +43,7 @@
 					</a>
 					<ul class="sidenav-second-level collapse <?= $show_category; ?>" id="collapseMulti4">
 						<li class="<?= $manage_category_active; ?>">
-							<a href="<?= site_url('admin/view_category'); ?>">Kelola</a>
+							<a href="<?= site_url('admin/view_category'); ?>">Edit</a>
 						</li>
 						<li class="<?= $add_category_active; ?>">
 							<a href="<?= site_url('admin/add_category'); ?>">Tambah</a>

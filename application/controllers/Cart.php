@@ -33,14 +33,14 @@ class CART extends CI_Controller {
             }
             $insert = $this->cart_model->addProductToCart($cart_id, $product_id, $quantity);
             if ($insert) {
-                $message = "Berhasil menambahkan produk!";
+                $message = "Berhasil menambahkan jasa!";
                 $array = array (
                     "success" => true,
                     "message" => $message,
                     "title" => "Berhasil!"
                 );
             } else {
-                $message = "Gagal menambahkan produk!";
+                $message = "Gagal menambahkan jasa!";
                 $array = array (
                     "success" => false,
                     "message" => $message,
@@ -56,8 +56,8 @@ class CART extends CI_Controller {
     public function removeFromCart() {
         $pcid = $this->input->post('productCartId');
         $succ = $this->cart_model->removeFromCart($pcid);
-        if ($succ) $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> Produk berhasil dihapus dari keranjang. </div>';
-        else $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Gagal menghapus produk dari keranjang. </div>';       
+        if ($succ) $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> Jasa berhasil dihapus dari keranjang. </div>';
+        else $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Gagal menghapus jasa dari keranjang. </div>';       
 
         $this->session->set_flashdata('msg', $message);
         redirect('user/your_cart');
@@ -65,7 +65,7 @@ class CART extends CI_Controller {
     
     public function checkout() {
         $data['user_id'] = $this->input->post('user_id');
-        $data['country'] = $this->input->post('country');
+        $data['province'] = $this->input->post('province');
         $data['postcode'] = $this->input->post('postcode');
         $data['address'] = $this->input->post('address');
         $data['town'] = $this->input->post('town');
@@ -79,12 +79,12 @@ class CART extends CI_Controller {
         $products = $this->cart_model->getProductsInCart($cartid);
         $count = count($products);
         if ($count == 0) {
-            $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Tidak ada produk di keranjang Anda. </div>'; 
+            $message = '<div class="alert alert-danger" style="margin-top:10px" role="alert"> Keranjang Anda kosong. </div>'; 
             $this->session->set_flashdata('msg', $message);
             redirect('user/your_cart');
         } else {
             $this->cart_model->buyCart($cartid);
-            $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> Berhasil membeli produk di keranjang. </div>'; 
+            $message = '<div class="alert alert-success" style="margin-top:10px" role="alert"> Berhasil melakukan checkout. </div>'; 
             $this->session->set_flashdata('msg', $message);
             redirect('user/your_cart');
         }

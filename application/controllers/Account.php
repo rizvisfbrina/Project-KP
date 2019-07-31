@@ -35,29 +35,29 @@ class Account extends CI_Controller {
 	public function registerAccount() {
 		$this->form_validation->set_rules(
 			'FName', 'Nama Depan',
-			'trim|required|min_length[5]|max_length[20]|alpha',
+			'trim|required|min_length[1]|max_length[50]|alpha',
 			array(
-				'required' => 'Anda belum mengisi %s.',
-				'min_length' => ' {field} berisi minimal sebanyak {param} karakter.',
-				'max_length' => ' {field} berisi maksimal sebanyak {param} karakter.',
-				'alpha' => 'Anda hanya boleh menggunakan huruf untuk pengisian {field}'
+			'required' => 'Anda belum mengisi %s.',
+			'min_length' => ' {field} harus berisi setidaknya {param} karakter.',
+			'max_length' => ' {field} berisi maksimal {param} karakter.',
+			'alpha' => ' {field} hanya boleh berisi huruf.'
 			)
 		);
 
 		$this->form_validation->set_rules(
 			'LName', 'Nama Belakang',
-			'trim|required|min_length[5]|max_length[20]|alpha',
+			'trim|required|min_length[1]|max_length[50]|alpha',
 			array(
-				'required' => 'Anda belum mengisi %s.',
-				'min_length' => '{field} berisi minimal sebanyak {param} karakter.',
-				'max_length' => '{field} berisi maksimal sebanyak {param} karakter.',
-				'alpha' => 'Anda hanya boleh menggunakan huruf untuk pengisian {field}'
+			'required' => 'Anda belum mengisi %s.',
+			'min_length' => ' {field} harus berisi setidaknya {param} karakter.',
+			'max_length' => ' {field} berisi maksimal {param} karakter.',
+			'alpha' => ' {field} hanya boleh berisi huruf.'
 			)
 		);
 
 		$this->form_validation->set_rules(
 			'PName', 'Nama Perusahaan',
-			'trim|required|min_length[5]|max_length[20]',
+			'trim|required|min_length[1]|max_length[50]',
 			array(
 				'required' => 'Anda belum mengisi %s.',
 				'min_length' => '{field} berisi minimal sebanyak {param} karakter.',
@@ -117,7 +117,7 @@ class Account extends CI_Controller {
 				$this->session->set_flashdata('fail', '<div class="alert alert-success" style="margin-top:10px" role="alert"> Registrasi berhasil!</div>'); 
 				redirect('account');
 			} else {
-				$this->session->set_flashdata('register', '<div class="alert alert-danger" style="margin-top:10px" role="alert">Gagal registrasi!</div>'); 
+				$this->session->set_flashdata('register', '<div class="alert alert-danger" style="margin-top:10px" role="alert">Registrasi Gagal!</div>'); 
 				redirect('account/register');
 			}
 		}
@@ -146,7 +146,7 @@ class Account extends CI_Controller {
 			redirect('Admin');
 		} else if ($result == "ban") {
 			$this->session->set_flashdata('success', '<div class="alert alert-danger mt-4" role="alert">
-  				Anda tidak dapat mengakses website ini!</div>'); 
+  				User sedang <strong>diblokir!</strong></div>'); 
 			redirect('shop');
 		} else {
 			$this->session->set_flashdata('fail', '<div class="alert alert-danger mt-4" role="alert">
