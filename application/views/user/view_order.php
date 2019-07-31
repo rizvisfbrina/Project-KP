@@ -72,7 +72,7 @@
                 </tr>
                 <tr>
                   <td colspan=3></td>
-                    <th colspan=1>Invoice bisa didownload di <a href="<?= site_url('pdf/view_pdf/'.$cart->cart_id) ?>"><strong><em>sini</em></strong></a>
+                    <th colspan=1>Invoice bisa didownload di <a href="<?= site_url('pdf/pdfview/'.$cart->cart_id) ?>"><strong><em>sini</em></strong></a>
                     </th>
                 </tr>
               </tbody>
