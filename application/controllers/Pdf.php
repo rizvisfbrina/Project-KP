@@ -35,9 +35,13 @@ Class Pdf extends CI_Controller{
 				redirect('pdf/your_order');
 			} else {
                 $cartData = $data['cartData'] = $this->cart_model->getProductsInCart($cartid);
-                $data['totalPrice'] = 0;
+                $data['totalPrice1'] = 0;
+				$data['totalTax'] = 0;
+				$data['totalPrice'] = 0;
                 foreach($cartData as $cart) {
-                    $data['totalPrice'] += $cart->price * $cart->quantity;
+                    $data['totalPrice1'] += $cart->price * $cart->quantity;
+					$data['totalTax'] = (0.1 * $data['totalPrice1']);
+					$data['totalPrice'] =  ($data['totalTax'] + $data['totalPrice1']);
                 }
                 $this->load->view('pdf/pdfview', $data);
             }
