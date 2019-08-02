@@ -1,10 +1,6 @@
-
-<?php
-    
+<?php    
     $pdf = new FPDF('P','mm','A4');
     $pdf->AddPage();
-    // $image1 = "/logo.png";
-    // $pdf->Image($image1,10,10,-300);
 
     $pdf->SetFont('Arial','B',12);
     $pdf->Cell(190,7,'PT Pelindo Daya Sejahtera',0,1,'C');
@@ -15,25 +11,25 @@
     $pdf->SetFont('Arial','',9);
     $pdf->Cell(20,6,'PROJECT',0,0, 'L');
     $pdf->Cell(20,6,'PROJECT',0,0, 'L');
-    $pdf->Cell(155,6,'Jl. Perak Timur 480 Surabaya', 0,0, 'R');
+    $pdf->Cell(150,6,'Jl. Perak Timur 480 Surabaya', 0,0, 'R');
 
     $pdf->Cell(10,7,'',0,1);
     $pdf->SetFont('Arial','',9);
     $pdf->Cell(20,7,'CLIENT',0,0,'L');
     $pdf->Cell(20,7,'CLIENT',0,0,'L');
-    $pdf->Cell(155,7,'(031) 51166384',0,0,'R');
+    $pdf->Cell(150,7,'(031) 51166384',0,0,'R');
     
     $pdf->Cell(10,7,'',0,1);
     $pdf->SetFont('Arial','',9);
     $pdf->Cell(20,8,'ADDRESS',0,0,'L');
     $pdf->Cell(20,8,'ADDRESS',0,0,'L');
-    $pdf->Cell(155,8,'(031) 51166386',0,0,'R');
+    $pdf->Cell(150,8,'(031) 51166386',0,0,'R');
 
     $pdf->Cell(10,7,'',0,1);
     $pdf->SetFont('Arial','',9);
     $pdf->Cell(20,9,'EMAIL',0,0,'L');
     $pdf->Cell(20,9,'EMAIL',0,0,'L');
-    $pdf->Cell(155,9,'info@ptpds.co.id',0,0,'R');
+    $pdf->Cell(150,9,'info@ptpds.co.id',0,0,'R');
 
     $pdf->Cell(10,7,'',0,1);
     $pdf->SetFont('Arial','',9);
