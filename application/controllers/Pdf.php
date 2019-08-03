@@ -35,6 +35,8 @@ Class Pdf extends CI_Controller{
 				redirect('pdf/your_order');
 			} else {
                 $cartData = $data['cartData'] = $this->cart_model->getProductsInCart($cartid);
+                
+
                 $data['totalPrice1'] = 0;
 				$data['totalTax'] = 0;
 				$data['totalPrice'] = 0;
@@ -43,6 +45,13 @@ Class Pdf extends CI_Controller{
 					$data['totalTax'] = (0.1 * $data['totalPrice1']);
 					$data['totalPrice'] =  ($data['totalTax'] + $data['totalPrice1']);
                 }
+
+                $data['user'] = $this->user_model->get_userdetail($this->session->userdata('userid'))->row();
+                $data['shipping_address'] = $this->user_model->get_shipping_address($this->session->userdata('userid'))->row();
+                $data['orders'] = $this->cart_model->getAllUserOrders()->row();
+                // $shipping_address = $this->user_model->get_shipping_address($this->session->userdata($data['user_id']));
+                
+
                 $this->load->view('pdf/pdfview', $data);
             }
     }
