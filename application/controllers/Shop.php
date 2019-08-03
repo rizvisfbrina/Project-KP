@@ -80,7 +80,7 @@ class Shop extends CI_Controller {
 		if ($this->session->userdata('usertype') != "user") {
 			$data['disabled'] = "disabled";
 		}
-		$this->load->view('layout/shop/header', $active);
+		$this->load->view('shop/header-ctab', $active);
 		$this->load->view('shop/product_page', $data);
 		$this->load->view('layout/shop/footer');
 	}

@@ -20,7 +20,7 @@
 
 	
 		<!-- Footer -->
-		<footer class="py-1 mt-1" style="background-color: transparent; ">
+		<!-- <footer class="py-1 mt-1" style="background-color: transparent; ">
 			<div class="container">
 				<p class="m-0 text-center text-white" style="font-size: 10pt;"> &copy; PT Pelindo Daya Sejahtera 2019</p><br>
 				   <div class="inline-ul text-center">
@@ -36,17 +36,29 @@
                           </div>
 				<button onclick="topFunction()" id="myBtn" title="Go to top" >  ˄  
 				</button>
-			</div>
+			</div> -->
 			<!-- /.container -->
-		</footer>
+		<!-- </footer> -->
 
 		<?php include ('logout.php') ?>
 
+		<script src="<?php echo base_url();?>style/js2/jquery.min.js"></script>
+		<script src="<?php echo base_url();?>style/js2/jquery.easing.1.3.js"></script>
+		<script src="<?php echo base_url();?>style/js2/bootstrap.min.js"></script>
+		<script src="<?php echo base_url();?>style/js2/jquery.waypoints.min.js"></script>
+		<script src="<?php echo base_url();?>style/js2/jquery.flexslider-min.js"></script>
+		<script src="<?php echo base_url();?>style/js2/sticky-kit.min.js"></script>
+		<script src="<?php echo base_url();?>style/js2/owl.carousel.min.js"></script>
+		<script src="<?php echo base_url();?>style/js2/jquery.countTo.js"></script>
+		
+		<script src="<?php echo base_url();?>style/js2/main.js"></script>
+
+
 		<!-- Bootstrap core JavaScript -->
-		<script src="<?php echo base_url();?>style/vendor/jquery/jquery.min.js"></script>
-		<script src="<?php echo base_url();?>style/vendor/popper/popper.min.js"></script>
+		<!-- <script src="<?php echo base_url();?>style/vendor/jquery/jquery.min.js"></script> -->
+		<!-- <script src="<?php echo base_url();?>style/vendor/popper/popper.min.js"></script> -->
 		<script src="<?php echo base_url();?>style/js/shop.js"></script>
-		<script src="<?php echo base_url();?>style/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!-- <script src="<?php echo base_url();?>style/vendor/bootstrap/js/bootstrap.min.js"></script> -->
 		
 		<script type="text/javascript">
 
@@ -57,20 +69,28 @@
 					var string = "<h4 style='color: white;'><br>Hasil pencarian \""+categoryName+"\"...</h4>";
 					string += "<div class='row'>";
 					for(var i = 0; i < data.length; i++) {
-						string += "<div class='col-lg-6'>"
-							+ "<div class='tour-card'>"
+						string += "<div class='col-md-5'>"
+							+ "<div class='project' style='background-image: url(<?= base_url()?>/"+data[i]['image_link']+");'>"
 								+ "<a href='<?= base_url(); ?>index.php/Shop/product/"+data[i]['product_id']+"'>"
-									+ "<img class='card-img rounded-0' src='<?= base_url();?>/"+data[i]['image_link']+"' alt='' height='300px'>"
-									+ "<div class='tour-card-overlay hvr-overline-from-center'>" + "<div class='media'>" + "<div class='row'>" + "<div class='col-sm-8'>" + "<h5 class='media-body'>"
+									// + "<img class='card-img rounded-0' src='<?= base_url();?>/"+data[i]['image_link']+"' alt='' height='300px'>"
+									// + "<div class='tour-card-overlay hvr-overline-from-center'>" + "<div class='media'>" + "<div class='row'>" + "<div class='col-sm-8'>" + "<h5 class='media-body'>"
+									+ "<div class='desc'>"
+									+ "<div class='con'>"
+									+ "<h3>"									
 									+ "<a href='<?= base_url(); ?>index.php/Shop/product/"+data[i]['product_id']+"'>"+data[i]['product_name']+"</a>"
-									+ "</h5>" + "</div>"
-									+ "<div class='col-sm-8'>"
+									// + "</h5>" + "</div>"
+									+ "</h3>"
+									+ "<span>"+data[i]['short_desc']+"</span>"
+									// + "<div class='col-sm-8'>"
+									+ "<br>"
+									+ "<div>"
 									+ "<input type='number' name='quantity' class='form-control' placeholder='Jumlah' id='quantity_"+data[i]['product_id']+"' />"
-									+ "<input type='hidden' name='product_id' class='form-control' value='"+data[i]['product_id']+"'/>" + "<button style='background-color: #116185; color: white' class='pull-right btn btn-outline-primary waves-effect' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
-										+ "<span class='fa fa-shopping-cart pull-left'></span>"
+									+ "<input type='hidden' name='product_id' class='form-control' value='"+data[i]['product_id']+"'/>" 
+									+ "</div>"
+									+ "<br>"
+									+ "<button class='pull-right btn btn-primary waves-effect' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
 										+ "Tambahkan" 		
 									+ "</button>"
-									+ "</div>"
 									+ "</div>"
 									+ "</div>" 
 									+ "</div>"
@@ -89,27 +109,34 @@
 										var string = "<h4 style='color: white;'><br>Hasil pencarian "+search+"...</h4>";
 										string += "<div class='row'>";
 										for(var i = 0; i < data.length; i++) {
-											string += "<div class='col-lg-6'>"
-											+ "<div class='tour-card'>"
-												+ "<a href='<?= base_url(); ?>index.php/Shop/product/"+data[i]['product_id']+"'>"
-													+ "<img class='card-img rounded-0' src='<?= base_url();?>/"+data[i]['image_link']+"' alt='' height='300px'>"
-													+ "<div class='tour-card-overlay hvr-overline-from-center'>" + "<div class='media'>" + "<div class='row'>" + "<div class='col-sm-8'>"
-													+ "<h5 class='media-body'>"
-													+ "<a href='<?= base_url(); ?>index.php/Shop/product/"+data[i]['product_id']+"'>"+data[i]['product_name']+"</a>"
-													+ "</h5>"
-													+ "</div>" + "<div class='col-sm-8'>"
-													+ "<input type='number' name='quantity' class='form-control' placeholder='Jumlah' id='quantity_"+data[i]['product_id']+"' />"
-													+ "<input type='hidden' name='product_id' class='form-control' value='"+data[i]['product_id']+"'/>" + "<button style='background-color: #116185; color: white' class='pull-right btn btn-outline-primary waves-effect' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
-														+ "<span class='fa fa-shopping-cart pull-left'></span>"
-														+ "Tambahkan" 		
-													+ "</button>"
-													+ "</div>"
-													+ "</div>"
-													+ "</div>"
-													+ "</div>"
-													+ "</div>"
-													+ "</div>";
-												}
+											string += "<div class='col-md-5'>"
+												+ "<div class='project' style='background-image: url(<?= base_url()?>/"+data[i]['image_link']+");'>"
+													+ "<a href='<?= base_url(); ?>index.php/Shop/product/"+data[i]['product_id']+"'>"
+														// + "<img class='card-img rounded-0' src='<?= base_url();?>/"+data[i]['image_link']+"' alt='' height='300px'>"
+														// + "<div class='tour-card-overlay hvr-overline-from-center'>" + "<div class='media'>" + "<div class='row'>" + "<div class='col-sm-8'>" + "<h5 class='media-body'>"
+														+ "<div class='desc'>"
+														+ "<div class='con'>"
+														+ "<h3>"									
+														+ "<a href='<?= base_url(); ?>index.php/Shop/product/"+data[i]['product_id']+"'>"+data[i]['product_name']+"</a>"
+														// + "</h5>" + "</div>"
+														+ "</h3>"
+														+ "<span>"+data[i]['short_desc']+"</span>"
+														// + "<div class='col-sm-8'>"
+														+ "<br>"
+														+ "<div>"
+														+ "<input type='number' name='quantity' class='form-control' placeholder='Jumlah' id='quantity_"+data[i]['product_id']+"' />"
+														+ "<input type='hidden' name='product_id' class='form-control' value='"+data[i]['product_id']+"'/>" 
+														+ "</div>"
+														+ "<br>"
+														+ "<button class='pull-right btn btn-primary waves-effect' type='button' onclick='addToCart("+data[i]['product_id']+")'>"
+															+ "Tambahkan" 		
+														+ "</button>"
+														+ "</div>"
+														+ "</div>" 
+														+ "</div>"
+														+ "</div>"
+														+ "</div>";
+										}
 						string += "</div>";
 							$("#content").html(string);
 					}, 'json');
@@ -126,7 +153,7 @@
 }, 4000);
 </script>
 
-	<script>
+	<!-- <script>
 	// When the user scrolls down 20px from the top of the document, show the button
 		window.onscroll = function() {scrollFunction()};
 
@@ -143,9 +170,10 @@
 		  document.body.scrollTop = 0; // For Safari
 		  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 		}
-		</script>
+		</script> -->
 
-		
+	</div>
+	</div>
 	</body>
 
 </html>
