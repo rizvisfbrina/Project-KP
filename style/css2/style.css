@@ -84,7 +84,7 @@ figure {
   left: 0;
   overflow-y: scroll;
   z-index: 1001;
-  background: #2C2C2C;
+  background: #a1b0bdef;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -133,7 +133,7 @@ figure {
       text-transform: uppercase;
       letter-spacing: 1px; }
       #colorlib-aside #colorlib-main-menu ul li a {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgb(255, 255, 255);
         text-decoration: none;
         position: relative;
         padding: 10px 0;
@@ -187,7 +187,7 @@ figure {
     font-size: 15px;
     text-align: center;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
     padding: 0 20px;
     width: 100%; }
     @media screen and (max-width: 768px) {
@@ -205,7 +205,7 @@ figure {
         display: inline;
         list-style: none; }
         #colorlib-aside .colorlib-footer ul li a {
-          color: rgba(255, 255, 255, 0.3);
+          color: rgba(255, 255, 255, 255);
           padding: 4px; }
           #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
             text-decoration: none;
@@ -259,7 +259,7 @@ figure {
         display: block;
         margin-bottom: 10px; }
         #colorlib-hero .flexslider .flex-control-nav li a {
-          background: rgba(255, 255, 255, 0.5);
+          background: rgba(255, 255, 255, 255);
           -webkit-box-shadow: none;
           box-shadow: none;
           width: 12px;
@@ -355,7 +355,7 @@ body.offcanvas {
     -o-transform: translateX(0);
     transform: translateX(0);
     width: 270px;
-    background: #2C2C2C;
+    background: #a1b0bdef;
     z-index: 999;
     position: fixed; }
   body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
@@ -1003,8 +1003,8 @@ body.offcanvas {
   color: #fff;
   border: 2px solid #1B4B73; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #ffc91a !important;
-    border-color: #ffc91a !important; }
+    background: #3e82b9 !important;
+    border-color: #3e82b9 !important; }
   .btn-primary.btn-outline {
     background: transparent;
     color: #1B4B73;

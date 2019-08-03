@@ -695,7 +695,12 @@
 		<!-- Navigation -->
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<h1 id="colorlib-logo"><a href="index.html">PT PDS</a></h1>
+			<h1 id="colorlib-logo">
+				<a href="<?= site_url('shop'); ?>">
+					<img src="<?= base_url('style/assets/images/icon.png'); ?>" width="130" height="100">	
+				</a>
+			</h1>
+			
 
 			<nav id="colorlib-main-menu" role="navigation" >
 				<!-- <div class="container"> -->
@@ -707,6 +712,7 @@
 						<ul>
 							<li class="colorlib-active <?= $home; ?>">
 								<a href="<?= site_url('shop'); ?>"><b>Beranda</b>
+									<span class="sr-only">(current)</span>
 								</a>
 							</li>
 							<li class="<?= $about; ?>">
@@ -732,14 +738,15 @@
 			</nav>
 
 			<div class="colorlib-footer">
-				<p><small>&copy;
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> PT Pelindo Daya Sejahtera | All rights reserved
-				</small></p>
+				<p><small>
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved. <br>PT Pelindo Daya Sejahtera 
+				 </small>	
+			</p>
 				<ul>
-					<li><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-twitter2"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+					<li><a href="https://www.facebook.com/pelindodayasejahtera/"><i style="color:#1B4B73;" class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i style="color:#1B4B73;" class="icon-twitter2"></i></a></li>
+					<li><a href="https://www.instagram.com/pelindodayasejahtera/"><i style="color:#1B4B73;" class="icon-instagram"></i></a></li>
+					<li><a href="#"><i style="color:#1B4B73;" class="icon-linkedin2"></i></a></li>
 				</ul>
 			</div>
 		</aside>

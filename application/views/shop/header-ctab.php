@@ -695,7 +695,12 @@
 		<!-- Navigation -->
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<h1 id="colorlib-logo"><a href="index.html">PT PDS</a></h1>
+			<h1 id="colorlib-logo">
+				<a href="<?= site_url('shop'); ?>">
+					<img src="<?= base_url('style/assets/images/icon.png'); ?>" width="130" height="100">	
+				</a>
+			</h1>
+			
 
 			<nav id="colorlib-main-menu" role="navigation" >
 				<!-- <div class="container"> -->
@@ -705,23 +710,24 @@
 					</button> -->
 					<!-- <div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="navbarResponsive"> -->
 						<ul>
-							<li class="<?= $home; ?>">
+							<li class="colorlib- <?= $home; ?>">
 								<a href="<?= site_url('shop'); ?>"><b>Beranda</b>
+								<span class="sr-only">(current)</span>
 								</a>
 							</li>
-							<li class="<?= $about; ?>">
+							<li class="colorlib- <?= $about; ?>">
 								<a href="<?= site_url('shop/about');?>"><b>Tentang</b></a>
 							</li>
-							<li class="<?= $contact; ?>">
+							<li class="colorlib- <?= $contact; ?>">
 								<a href="<?= site_url('shop/contact');?>"><b>Kontak</b></a>
 							</li>
-							<li>
+							<li class="colorlib-">
 								<?php 	if ($this->session->userdata('usertype') == "admin") : ?>
-									<li><a href="<?php echo base_url()?>index.php/admin"><b>Dashboard Admin</b></a></li>
-									<li><a style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
+									<li class="colorlib-"><a href="<?php echo base_url()?>index.php/admin"><b>Dashboard Admin</b></a></li>
+									<li class="colorlib-"><a style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
 								<?php elseif ($this->session->userdata('usertype') == "user") : ?>
-									<li><a href="<?php echo base_url()?>index.php/user/dashboard"><b>Profil</b></a></li>
-									<li><a style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
+									<li class="colorlib-"><a href="<?php echo base_url()?>index.php/user/dashboard"><b>Profil</b></a></li>
+									<li class="colorlib-"><a style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
 								<?php else : ?>
 									<a href="<?php echo base_url()?>index.php/Account"><!-- <button class="btn btn-primary py-1"></button> -->Login</a>
 								<?php endif; ?>
@@ -732,14 +738,15 @@
 			</nav>
 
 			<div class="colorlib-footer">
-				<p><small>&copy;
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> PT Pelindo Daya Sejahtera | All rights reserved
-				</small></p>
+				<p><small>
+				Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved. <br>PT Pelindo Daya Sejahtera 
+				 </small>	
+			</p>
 				<ul>
-					<li><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-twitter2"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+					<li><a href="https://www.facebook.com/pelindodayasejahtera/"><i style="color:#1B4B73;" class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i style="color:#1B4B73;" class="icon-twitter2"></i></a></li>
+					<li><a href="https://www.instagram.com/pelindodayasejahtera/"><i style="color:#1B4B73;" class="icon-instagram"></i></a></li>
+					<li><a href="#"><i style="color:#1B4B73;" class="icon-linkedin2"></i></a></li>
 				</ul>
 			</div>
 		</aside>
