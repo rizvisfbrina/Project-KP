@@ -46,40 +46,7 @@
 		<title>PT Pelindo Daya Sejahtera <?= $title; ?></title>
 		<link rel="icon" href="<?= base_url('style/assets/images/icon.png'); ?>" type="image/gif">
 
-		<!-- Bootstrap core CSS -->
-		<!-- <link href="<?php echo base_url();?>style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
-		<!-- <link href="<?php echo base_url();?>style/css/bootstrap.min.css" rel="stylesheet"> -->
-
-		<!-- Custom styles for this template -->
-		<!-- <link href="<?php echo base_url();?>style/css/shop.css" rel="stylesheet"> -->
-		<!-- <link href="<?php echo base_url();?>style/css/grayscale.min.css" rel="stylesheet"> -->
-		<!-- <link href="<?php echo base_url();?>style/css/reg-log.css" rel="stylesheet"> -->
-		<!-- <link href="<?php echo base_url();?>style/css/mdb.css" rel="stylesheet"> -->
-		<!-- <link href="<?php echo base_url();?>style/css/mdb.lite.css" rel="stylesheet"> -->
-		<!-- <link href="<?php echo base_url();?>style/css/mdb.lite.min.css" rel="stylesheet"> -->
-		<!-- <link href="<?php echo base_url();?>style/css/mdb.min.css" rel="stylesheet"> -->
-		<!-- <link href="<?php echo base_url();?>style/css/animate.css" rel="stylesheet"> -->
-
-		<!-- <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
-   		<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
-		<!-- <link href="https://fonts.googleapis.com/css?family=Merriweather:900" rel="stylesheet"> -->
-
-<!-- baryu -->
-
-		<!--  -->
-
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-     	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-     	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
-     	<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
-
-     	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"> -->
-
-		<!-- <script src="<?php echo base_url();?>style/js/grayscale.min.js"></script> -->
-		<!-- <script src="<?php echo base_url();?>style/js/wow.min.js"></script> -->
-		<!-- <script src="<?php echo base_url();?>style/js/wow.js"></script> -->
-
+		
 		<script>
 			function myMap() {
 			var mapProp= {
@@ -614,6 +581,33 @@
 			* Copyright (c) 2015 Matthieu Aussaguel; Licensed MIT */(function(){var a,b,c,d,e,f=function(a,b){return function(){return a.apply(b,arguments)}},g=[].indexOf||function(a){for(var b=0,c=this.length;c>b;b++)if(b in this&&this[b]===a)return b;return-1};b=function(){function a(){}return a.prototype.extend=function(a,b){var c,d;for(c in b)d=b[c],null==a[c]&&(a[c]=d);return a},a.prototype.isMobile=function(a){return/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(a)},a.prototype.createEvent=function(a,b,c,d){var e;return null==b&&(b=!1),null==c&&(c=!1),null==d&&(d=null),null!=document.createEvent?(e=document.createEvent("CustomEvent"),e.initCustomEvent(a,b,c,d)):null!=document.createEventObject?(e=document.createEventObject(),e.eventType=a):e.eventName=a,e},a.prototype.emitEvent=function(a,b){return null!=a.dispatchEvent?a.dispatchEvent(b):b in(null!=a)?a[b]():"on"+b in(null!=a)?a["on"+b]():void 0},a.prototype.addEvent=function(a,b,c){return null!=a.addEventListener?a.addEventListener(b,c,!1):null!=a.attachEvent?a.attachEvent("on"+b,c):a[b]=c},a.prototype.removeEvent=function(a,b,c){return null!=a.removeEventListener?a.removeEventListener(b,c,!1):null!=a.detachEvent?a.detachEvent("on"+b,c):delete a[b]},a.prototype.innerHeight=function(){return"innerHeight"in window?window.innerHeight:document.documentElement.clientHeight},a}(),c=this.WeakMap||this.MozWeakMap||(c=function(){function a(){this.keys=[],this.values=[]}return a.prototype.get=function(a){var b,c,d,e,f;for(f=this.keys,b=d=0,e=f.length;e>d;b=++d)if(c=f[b],c===a)return this.values[b]},a.prototype.set=function(a,b){var c,d,e,f,g;for(g=this.keys,c=e=0,f=g.length;f>e;c=++e)if(d=g[c],d===a)return void(this.values[c]=b);return this.keys.push(a),this.values.push(b)},a}()),a=this.MutationObserver||this.WebkitMutationObserver||this.MozMutationObserver||(a=function(){function a(){"undefined"!=typeof console&&null!==console&&console.warn("MutationObserver is not supported by your browser."),"undefined"!=typeof console&&null!==console&&console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content.")}return a.notSupported=!0,a.prototype.observe=function(){},a}()),d=this.getComputedStyle||function(a){return this.getPropertyValue=function(b){var c;return"float"===b&&(b="styleFloat"),e.test(b)&&b.replace(e,function(a,b){return b.toUpperCase()}),(null!=(c=a.currentStyle)?c[b]:void 0)||null},this},e=/(\-([a-z]){1})/g,this.WOW=function(){function e(a){null==a&&(a={}),this.scrollCallback=f(this.scrollCallback,this),this.scrollHandler=f(this.scrollHandler,this),this.resetAnimation=f(this.resetAnimation,this),this.start=f(this.start,this),this.scrolled=!0,this.config=this.util().extend(a,this.defaults),this.animationNameCache=new c,this.wowEvent=this.util().createEvent(this.config.boxClass)}return e.prototype.defaults={boxClass:"wow",animateClass:"animated",offset:0,mobile:!0,live:!0,callback:null},e.prototype.init=function(){var a;return this.element=window.document.documentElement,"interactive"===(a=document.readyState)||"complete"===a?this.start():this.util().addEvent(document,"DOMContentLoaded",this.start),this.finished=[]},e.prototype.start=function(){var b,c,d,e;if(this.stopped=!1,this.boxes=function(){var a,c,d,e;for(d=this.element.querySelectorAll("."+this.config.boxClass),e=[],a=0,c=d.length;c>a;a++)b=d[a],e.push(b);return e}.call(this),this.all=function(){var a,c,d,e;for(d=this.boxes,e=[],a=0,c=d.length;c>a;a++)b=d[a],e.push(b);return e}.call(this),this.boxes.length)if(this.disabled())this.resetStyle();else for(e=this.boxes,c=0,d=e.length;d>c;c++)b=e[c],this.applyStyle(b,!0);return this.disabled()||(this.util().addEvent(window,"scroll",this.scrollHandler),this.util().addEvent(window,"resize",this.scrollHandler),this.interval=setInterval(this.scrollCallback,50)),this.config.live?new a(function(a){return function(b){var c,d,e,f,g;for(g=[],c=0,d=b.length;d>c;c++)f=b[c],g.push(function(){var a,b,c,d;for(c=f.addedNodes||[],d=[],a=0,b=c.length;b>a;a++)e=c[a],d.push(this.doSync(e));return d}.call(a));return g}}(this)).observe(document.body,{childList:!0,subtree:!0}):void 0},e.prototype.stop=function(){return this.stopped=!0,this.util().removeEvent(window,"scroll",this.scrollHandler),this.util().removeEvent(window,"resize",this.scrollHandler),null!=this.interval?clearInterval(this.interval):void 0},e.prototype.sync=function(){return a.notSupported?this.doSync(this.element):void 0},e.prototype.doSync=function(a){var b,c,d,e,f;if(null==a&&(a=this.element),1===a.nodeType){for(a=a.parentNode||a,e=a.querySelectorAll("."+this.config.boxClass),f=[],c=0,d=e.length;d>c;c++)b=e[c],g.call(this.all,b)<0?(this.boxes.push(b),this.all.push(b),this.stopped||this.disabled()?this.resetStyle():this.applyStyle(b,!0),f.push(this.scrolled=!0)):f.push(void 0);return f}},e.prototype.show=function(a){return this.applyStyle(a),a.className=a.className+" "+this.config.animateClass,null!=this.config.callback&&this.config.callback(a),this.util().emitEvent(a,this.wowEvent),this.util().addEvent(a,"animationend",this.resetAnimation),this.util().addEvent(a,"oanimationend",this.resetAnimation),this.util().addEvent(a,"webkitAnimationEnd",this.resetAnimation),this.util().addEvent(a,"MSAnimationEnd",this.resetAnimation),a},e.prototype.applyStyle=function(a,b){var c,d,e;return d=a.getAttribute("data-wow-duration"),c=a.getAttribute("data-wow-delay"),e=a.getAttribute("data-wow-iteration"),this.animate(function(f){return function(){return f.customStyle(a,b,d,c,e)}}(this))},e.prototype.animate=function(){return"requestAnimationFrame"in window?function(a){return window.requestAnimationFrame(a)}:function(a){return a()}}(),e.prototype.resetStyle=function(){var a,b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d[b],e.push(a.style.visibility="visible");return e},e.prototype.resetAnimation=function(a){var b;return a.type.toLowerCase().indexOf("animationend")>=0?(b=a.target||a.srcElement,b.className=b.className.replace(this.config.animateClass,"").trim()):void 0},e.prototype.customStyle=function(a,b,c,d,e){return b&&this.cacheAnimationName(a),a.style.visibility=b?"hidden":"visible",c&&this.vendorSet(a.style,{animationDuration:c}),d&&this.vendorSet(a.style,{animationDelay:d}),e&&this.vendorSet(a.style,{animationIterationCount:e}),this.vendorSet(a.style,{animationName:b?"none":this.cachedAnimationName(a)}),a},e.prototype.vendors=["moz","webkit"],e.prototype.vendorSet=function(a,b){var c,d,e,f;d=[];for(c in b)e=b[c],a[""+c]=e,d.push(function(){var b,d,g,h;for(g=this.vendors,h=[],b=0,d=g.length;d>b;b++)f=g[b],h.push(a[""+f+c.charAt(0).toUpperCase()+c.substr(1)]=e);return h}.call(this));return d},e.prototype.vendorCSS=function(a,b){var c,e,f,g,h,i;for(h=d(a),g=h.getPropertyCSSValue(b),f=this.vendors,c=0,e=f.length;e>c;c++)i=f[c],g=g||h.getPropertyCSSValue("-"+i+"-"+b);return g},e.prototype.animationName=function(a){var b;try{b=this.vendorCSS(a,"animation-name").cssText}catch(c){b=d(a).getPropertyValue("animation-name")}return"none"===b?"":b},e.prototype.cacheAnimationName=function(a){return this.animationNameCache.set(a,this.animationName(a))},e.prototype.cachedAnimationName=function(a){return this.animationNameCache.get(a)},e.prototype.scrollHandler=function(){return this.scrolled=!0},e.prototype.scrollCallback=function(){var a;return!this.scrolled||(this.scrolled=!1,this.boxes=function(){var b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d[b],a&&(this.isVisible(a)?this.show(a):e.push(a));return e}.call(this),this.boxes.length||this.config.live)?void 0:this.stop()},e.prototype.offsetTop=function(a){for(var b;void 0===a.offsetTop;)a=a.parentNode;for(b=a.offsetTop;a=a.offsetParent;)b+=a.offsetTop;return b},e.prototype.isVisible=function(a){var b,c,d,e,f;return c=a.getAttribute("data-wow-offset")||this.config.offset,f=window.pageYOffset,e=f+Math.min(this.element.clientHeight,this.util().innerHeight())-c,d=this.offsetTop(a),b=d+a.clientHeight,e>=d&&b>=f},e.prototype.util=function(){return null!=this._util?this._util:this._util=new b},e.prototype.disabled=function(){return!this.config.mobile&&this.util().isMobile(navigator.userAgent)},e}()}).call(this);
         </script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+		</script>
 
 
 		<script> 
@@ -655,39 +649,6 @@
 			}
 		</script> 
 
-
-		<!-- <script type="text/javascript">
-			
- 			function collapseNavbar(){
- 				if($(".navbar").offset().top>50){
- 					$(".fixed-top").addClass("top-nav-collapse");
- 				}else{
- 					$(".fixed-top").removeClass("top-nav-collapse");
- 				}
- 			}
- 			$(window).scroll(collapseNavbar);
- 			$(document).ready(collapseNavbar);			
- 			$(function(){
- 				$('a.scroll').bind('click',function(event){
- 					var $anchor=$(this);
- 					$('html, body').stop().animate({
- 						scrollTop:$($anchor.attr('href')).offset().top},1500,'easeInOutExpo');
- 					event.preventDefault();
- 				});});
- 			$('.navbar-collapse ul li a').click(function(){
- 				$(".navbar-collapse").collapse('hide');});
- 			var map=null;
- 			google.maps.event.addDomListener(window,'load',init);
- 			google.maps.event.addDomListener(window,'resize',function(){
- 				map.setCenter(new google.maps.LatLng(40.6700,-73.9400));});
- 			function init(){
- 				var mapOptions={
- 					zoom:15,center:new google.maps.LatLng(40.6700,-73.9400),disableDefaultUI:true,scrollwheel:false,draggable:false,styles:[{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]}]};var mapElement=document.getElementById('map');map=new google.maps.Map(mapElement,mapOptions);var image='img/map-marker.png';var myLatLng=new google.maps.LatLng(40.6700,-73.9400);var beachMarker=new google.maps.Marker({position:myLatLng,map:map,icon:image});}
-
-		</script> -->
-
-		<!-- // <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
-
 	</head>
 
 <body>
@@ -703,12 +664,6 @@
 			
 
 			<nav id="colorlib-main-menu" role="navigation" >
-				<!-- <div class="container"> -->
-					<!-- <a class="navbar-brand" href="<?= site_url('shop'); ?>">PT PDS</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button> -->
-					<!-- <div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="navbarResponsive"> -->
 						<ul>
 							<li class="colorlib-active <?= $home; ?>">
 								<a href="<?= site_url('shop'); ?>"><b>Beranda</b>
@@ -739,7 +694,7 @@
 
 			<div class="colorlib-footer">
 				<p><small>
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved. <br>PT Pelindo Daya Sejahtera 
+				 &copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved. <br>PT Pelindo Daya Sejahtera 
 				 </small>	
 			</p>
 				<ul>
@@ -775,7 +730,9 @@
 					   					<div class="desc">
 						   					<h1 style="color:white;">Service and Solution</h1>
 						   					<h2 style="color:white;">Serve with Safety, Fast and Quality Excellent</h2>
-												<p><a class="btn btn-primary btn-learn">View Details <i class="icon-arrow-right3"></i></a></p>
+												<p><a href="#content" class="btn btn-primary btn-learn page-scroll" style=" scroll-behavior: smooth;">View Details <i class="icon-arrow-right3 animated"></i></a></p>
+
+
 											</div>
 					   				</div>
 					   			</div>
@@ -791,7 +748,10 @@
 					   					<div class="desc">
 						   					<h1 style="color:white;">Service and Solution</h1>
 												<h2 style="color:white;">Serve with Safety, Fast and Quality Excellent</h2>
-												<p><a class="btn btn-primary btn-learn">View Details <i class="icon-arrow-right3"></i></a></p>
+												<p><a href="#content" class="btn btn-primary btn-learn page-scroll">View Details <i class="icon-arrow-right3 animated"></i></a></p>
+						<!-- 						 <a href="#content" class="btn btn-circle page-scroll">
+                    	<i class="fa fa-angle-double-down animated"></i>
+                	</a> -->
 											</div>
 					   				</div>
 					   			</div>
@@ -807,7 +767,7 @@
 					   					<div class="desc">
 						   					<h1 style="color:white;">Service and Solution</h1>
 												<h2 style="color:white;">Serve with Safety, Fast and Quality Excellent</h2>
-												<p><a class="btn btn-primary btn-learn">View Details <i class="icon-arrow-right3"></i></a></p>
+												<p><a href="#content" class="btn btn-primary btn-learn page-scroll">View Details <i class="icon-arrow-right3 animated"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -817,5 +777,6 @@
 				  	</ul>
 			  	</div>
 			</aside>
+
 
 </body>

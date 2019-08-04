@@ -23,7 +23,7 @@
 							<div class="about-desc">
 								<span class="heading-meta">Service</span>
 								<h2 class="colorlib-heading"><?= $product->product_name; ?></h2>
-								<p> <?= $product->description;?> </p>
+								<div class="colorlib-text"><p align="justify"><?= $product->description;?> </p></div>
 							</div>	
 							<div class="card mt-4">
 								<div class="card-body">

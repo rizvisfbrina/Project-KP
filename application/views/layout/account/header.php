@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
-
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
+		<meta name="keywords" content="" />
 		<meta name="author" content="">
 
-		<title>PT Pelindo Daya Sejahtera <?= $title; ?></title>
-		<link rel="icon" href="<?= base_url('style/assets/images/icon.png'); ?>" type="image/gif">
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
 
-		<!-- Bootstrap core CSS -->
-		<link href="<?php echo base_url();?>style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="">
+
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+		
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="<?php echo base_url();?>style/css2/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="<?php echo base_url();?>style/css2/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="<?php echo base_url();?>style/css2/bootstrap.css">
+		<!-- Flexslider  -->
+		<link rel="stylesheet" href="<?php echo base_url();?>style/css2/flexslider.css">
+		<!-- Flaticons  -->
+		<link rel="stylesheet" href="<?php echo base_url();?>style/fonts/flaticon/font/flaticon.css">
+		<!-- Owl Carousel -->
+		<link rel="stylesheet" href="<?php echo base_url();?>style/css2/owl.carousel.min.css">
+		<link rel="stylesheet" href="<?php echo base_url();?>style/css2/owl.theme.default.min.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="<?php echo base_url();?>style/css2/style.css">
+
 
 		<link rel="stylesheet" href="<?php echo base_url();?>style/css/fontawesome/css/all.min.css">
 		<link rel="stylesheet" href="<?php echo base_url();?>style/css/themify-icons/themify-icons.css">
@@ -50,8 +77,38 @@
 		<script src="<?php echo base_url();?>style/js/wow.min.js"></script>
 		<script src="<?php echo base_url();?>style/js/wow.js"></script>
 
-		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-		
+			<script src="<?php echo base_url();?>style/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url();?>style/vendor/bootstrap/js/popper.js"></script>
+	<!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+<!--===============================================================================================-->
+	<script src="<?php echo base_url();?>style/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url();?>style/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="<?php echo base_url();?>style/js/main.js"></script>
+
+		<!-- Modernizr JS -->
+		<script src="<?php echo base_url();?>style/js2/modernizr-2.6.2.min.js"></script>
+
+		<title>PT Pelindo Daya Sejahtera <?= $title; ?></title>
+		<link rel="icon" href="<?= base_url('style/assets/images/icon.png'); ?>" type="image/gif">
+
+		<script>
+			function myMap() {
+			var mapProp= {
+			  center:new google.maps.LatLng(-7.197304,112.7271303),
+			  zoom:5,
+			};
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			}
+		</script>
+
 
 		<script type="text/javascript">
 			(function() {
@@ -617,78 +674,67 @@
 			}
 		</script> 
 
-<!-- 
-		<script type="text/javascript">
-			
- 			function collapseNavbar(){
- 				if($(".navbar").offset().top>50){
- 					$(".fixed-top").addClass("top-nav-collapse");
- 				}else{
- 					$(".fixed-top").removeClass("top-nav-collapse");
- 				}
- 			}
- 			$(window).scroll(collapseNavbar);
- 			$(document).ready(collapseNavbar);			
- 			$(function(){
- 				$('a.scroll').bind('click',function(event){
- 					var $anchor=$(this);
- 					$('html, body').stop().animate({
- 						scrollTop:$($anchor.attr('href')).offset().top},1500,'easeInOutExpo');
- 					event.preventDefault();
- 				});});
- 			$('.navbar-collapse ul li a').click(function(){
- 				$(".navbar-collapse").collapse('hide');});
- 			var map=null;
- 			google.maps.event.addDomListener(window,'load',init);
- 			google.maps.event.addDomListener(window,'resize',function(){
- 				map.setCenter(new google.maps.LatLng(40.6700,-73.9400));});
- 			function init(){
- 				var mapOptions={
- 					zoom:15,center:new google.maps.LatLng(40.6700,-73.9400),disableDefaultUI:true,scrollwheel:false,draggable:false,styles:[{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]}]};var mapElement=document.getElementById('map');map=new google.maps.Map(mapElement,mapOptions);var image='img/map-marker.png';var myLatLng=new google.maps.LatLng(40.6700,-73.9400);var beachMarker=new google.maps.Marker({position:myLatLng,map:map,icon:image});}
 
-		</script> -->
-
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		
 
 	</head>
 
-<body id="page-top" data-spy="scroll" data-target=".fixed-top">
-
+<body style="min-height: 350px; background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(<?= base_url('style/assets/images/headline/bg-33.jpg')?>) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover;">
+	
+	<div id="colorlib-page">
 		<!-- Navigation -->
-		<nav class="navbar navbar-custom navbar-expand-lg navbar-dark fixed-top top-nav-collapse" >
-			<div class="container">
-				<a class="navbar-brand" href="<?= site_url('shop'); ?>">PT PDS</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="navbarResponsive">
-					<ul class="nav navbar-nav ml-auto">
-						<li class="nav-item <?= $home; ?>">
-							<a class="nav-link page-scroll" href="<?= site_url('shop'); ?>"><b>Beranda</b>
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<h1 id="colorlib-logo">
+				<a href="<?= site_url('shop'); ?>">
+					<img src="<?= base_url('style/assets/images/icon.png'); ?>" width="130" height="100">	
+				</a>
+			</h1>
+			
+
+			<nav id="colorlib-main-menu" role="navigation" >
+						<ul>
+							<li class=" <?= $home; ?>">
+								<a href="<?= site_url('shop'); ?>"><b>Beranda</b>
 								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item <?= $about; ?>">
-							<a class="nav-link page-scroll" href="<?= site_url('shop/about');?>"><b>Tentang</b></a>
-						</li>
-						<li class="nav-item <?= $contact; ?>">
-							<a class="nav-link page-scroll" href="<?= site_url('shop/contact');?>"><b>Kontak</b></a>
-						</li>
-						<li class="nav-item">
-							<?php 	if ($this->session->userdata('usertype') == "admin") : ?>
-								<li class="nav-item"><a class="nav-link page-scroll" href="<?php echo base_url()?>index.php/admin"><b>Dashboard Admin</b></a></li>
-								<li class="nav-item"><a class="nav-link page-scroll" style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
-							<?php elseif ($this->session->userdata('usertype') == "user") : ?>
-								<li class="nav-item"><a class="nav-link page-scroll"  href="<?php echo base_url()?>index.php/user/dashboard"><b>Profil</b></a></li>
-								<li class="nav-item"><a class="nav-link page-scroll" style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
-							<?php else : ?>
-								<a class="nav-link page-scroll" href="<?php echo base_url()?>index.php/Account"><!-- <button class="btn btn-primary py-1"></button> -->Login</a>
-							<?php endif; ?>
-						</li>
-					</ul>
-				</div>
+								</a>
+							</li>
+							<li class=" <?= $about; ?>">
+								<a href="<?= site_url('shop/about');?>"><b>Tentang</b></a>
+							</li>
+							<li class=" <?= $contact; ?>">
+								<a href="<?= site_url('shop/contact');?>"><b>Kontak</b></a>
+							</li>
+							<li class="colorlib-active">
+								<?php 	if ($this->session->userdata('usertype') == "admin") : ?>
+									<li class="colorlib-"><a href="<?php echo base_url()?>index.php/admin"><b>Dashboard Admin</b></a></li>
+									<li class="colorlib-"><a style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
+								<?php elseif ($this->session->userdata('usertype') == "user") : ?>
+									<li class="colorlib-"><a href="<?php echo base_url()?>index.php/user/dashboard"><b>Profil</b></a></li>
+									<li class="colorlib-"><a style="margin-left:5px" data-toggle="modal" data-target="#logout"><!-- <button class="btn btn-danger py-1"></button> -->Logout</a></li>
+								<?php else : ?>
+									<a href="<?php echo base_url()?>index.php/Account"><!-- <button class="btn btn-primary py-1"></button> -->Login</a>
+								<?php endif; ?>
+							</li>
+						</ul>
+					<!-- </div> -->
+				<!-- </div> -->
+			</nav>
+
+			<div class="colorlib-footer">
+				<p><small>
+				&copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved. <br>PT Pelindo Daya Sejahtera 
+				 </small>	
+			</p>
+				<ul>
+					<li><a href="https://www.facebook.com/pelindodayasejahtera/"><i style="color:#1B4B73;" class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i style="color:#1B4B73;" class="icon-twitter2"></i></a></li>
+					<li><a href="https://www.instagram.com/pelindodayasejahtera/"><i style="color:#1B4B73;" class="icon-instagram"></i></a></li>
+					<li><a href="#"><i style="color:#1B4B73;" class="icon-linkedin2"></i></a></li>
+				</ul>
 			</div>
-		</nav>
+		</aside>
+
 		<!-- <header class="intro">
 	        <div class="intro-body">
 	            <div class="container">
@@ -698,5 +744,7 @@
                 	</a>
 	            </div>
 	        </div>
-	    </header>  -->
+		</header>  -->
+		
+		<div id="colorlib-main">
 </body>

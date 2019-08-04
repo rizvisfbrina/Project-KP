@@ -1,5 +1,4 @@
-<div class="wow bounceInDown">
-</div>
+
 <!-- <div class="row">
 	<div class="col-sm-6">
 		<div class="container">
@@ -148,11 +147,12 @@
 				</div>
 			</div>
 		</div>
+		<iframe width="1000" height="520" frameborder="0" src="http://maps.google.com/maps?q=-7.1968565,112.7312112&z=15&output=embed"></iframe>
 	</div>
 </div>
 
 <!-- <div id="map"> -->
-	<iframe width="1208" height="520" frameborder="0" src="http://maps.google.com/maps?q=-7.1968565,112.7312112&z=15&output=embed"></iframe>
+	
 <!-- </div>	 -->
 
 <div id="get-in-touch" class="colorlib-bg-color">
@@ -164,7 +164,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-				<p class="colorlib-lead">Kami ingin mendengar pendapat dari Anda.</p>
+				<p class="colorlib-lead">Kami ingin mendengar pendapat Anda.</p>
 				<p><a href="<?= site_url('shop/contact'); ?>" class="btn btn-primary btn-learn">Hubungi Kami!</a></p>
 			</div>
 		</div>

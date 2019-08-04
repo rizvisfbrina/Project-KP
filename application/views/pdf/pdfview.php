@@ -60,7 +60,7 @@
         $pdf->Cell(20,12,'',0,1,'C');
 
         $pdf->SetFillColor(209,212,207);
-        $pdf->SetTextColor(96);
+        $pdf->SetTextColor(50);
         $pdf->SetDrawColor(209, 212, 207);
         $pdf->SetLineWidth(.3);
         // $pdf->SetFont('','B');
@@ -72,7 +72,7 @@
         $pdf->Cell(40,12,'SUBTOTAL',1,1,'C',1);
 
         $pdf->SetFillColor(224,235,255);
-        $pdf->SetTextColor(96);
+        $pdf->SetTextColor(0);
         $pdf->SetFont('');
 
         $count = 1;

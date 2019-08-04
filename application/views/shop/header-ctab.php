@@ -739,7 +739,7 @@
 
 			<div class="colorlib-footer">
 				<p><small>
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved. <br>PT Pelindo Daya Sejahtera 
+				&copy;<script>document.write(new Date().getFullYear());</script> | All rights reserved. <br>PT Pelindo Daya Sejahtera 
 				 </small>	
 			</p>
 				<ul>

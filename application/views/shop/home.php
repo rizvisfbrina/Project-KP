@@ -86,7 +86,7 @@
 				<!-- <?= form_close(); ?> -->
 				
 
-					<div class="row">
+					<div class="row" id="content">
 						<!-- <div class="colorlib-work"> -->
 							<div class="colorlib-narrow-content">
 								<div class="row">
@@ -155,7 +155,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-				<p class="colorlib-lead">Kami ingin mendengar pendapat dari Anda.</p>
+				<p class="colorlib-lead">Kami ingin mendengar pendapat Anda.</p>
 				<p><a href="<?= site_url('shop/contact'); ?>" class="btn btn-primary btn-learn">Hubungi Kami!</a></p>
 			</div>
 		</div>
