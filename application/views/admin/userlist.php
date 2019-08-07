@@ -35,11 +35,11 @@
                     <td><?= $ul->first_name ?></td>
                     <td><?= $ul->last_name ?></td>
                     <td><?= $ul->email ?></td>
-                <?php if ($ul->ban_flag == 1) : ?>
-                  <td align='center' id="banCell<?= $ul->user_id ?>"><a data-toggle='modal' data-target='#unbanmodal' href='#' onclick='passId(<?= $ul->user_id ?>)' >Aktifkan</a></td>
-                <?php else: ?>
-                    <td align='center' id="banCell<?= $ul->user_id ?>"><a data-toggle='modal' data-target='#banmodal' href='#' onclick='passId(<?= $ul->user_id ?>)' >Blokir</a></td>
-                <?php endif; ?>
+                    <?php if ($ul->ban_flag == 1) : ?>
+                      <td align='center' id="banCell<?= $ul->user_id ?>"><a data-toggle='modal' data-target='#unbanmodal' href='#' onclick='passId(<?= $ul->user_id ?>)' >Aktifkan</a></td>
+                    <?php else: ?>
+                        <td align='center' id="banCell<?= $ul->user_id ?>"><a data-toggle='modal' data-target='#banmodal' href='#' onclick='passId(<?= $ul->user_id ?>)' >Blokir</a></td>
+                    <?php endif; ?>
                     </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -90,7 +90,6 @@
       </div>
     </div>
 
-
 <script>
   function passId(userId) {
     $('#passedUserId').val(userId);
@@ -113,7 +112,7 @@
         showSuccessAlert("User berhasil diaktifkan!")
       },'json');
   }
-
+  
   function showSuccessAlert(message) {
     var string = "<div class='alert alert-success'>"
           + "<strong>Berhasil!</strong> "+message

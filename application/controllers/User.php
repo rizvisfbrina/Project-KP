@@ -6,6 +6,8 @@
 			$this->load->model('user_model');
 			$this->load->model('cart_model');
 			$this->load->model('gate_model');
+			$this->load->model('admin_model');
+			$this->load->model('Chat_model');
 			// $this->load->helper("form");
 		}
 
@@ -193,17 +195,37 @@
 			
 		}
 		
+
+		// public function chat() {
+		// 	$this->gate_model->user_gate();
+		// 	$this->load->view('layout/user/header');
+		// 	$this->loadUserSidebar('show_cart_order', 'your_cart_active');
+		// 	$this->load->view('user/chat', $data);
+		// 	$this->load->view('layout/dashboard/logout');
+		// 	$this->load->view('layout/account/footer');
+		// }
+
+		
 		public function your_order() {
-			$orders = $this->cart_model->getAllUserOrders()->result();
-			foreach($orders as $order) {
-				$order->totalPrice = $this->cart_model->getTotalCartPrice($order->cart_id);
-			}
-			$data["orders"] = $orders;
-			$this->load->view('layout/user/header', array("title" => "Manage Orders"));
-			$this->loadUserSidebar('show_cart_order', 'your_order_active');
-			$this->load->view("user/manage_order", $data);
-			$this->load->view('layout/dashboard/logout');
-			$this->load->view('layout/user/footer');
+			// $userId = $_GET['userId'];
+			// $approve = $this->admin_model->approveContract($userId);
+			// $disapproved = $this->admin_model->disapprovedContract($userId);
+			// if($approve){
+				$orders = $this->cart_model->getAllUserOrders()->result();
+				foreach($orders as $order) {
+					$order->totalPrice = $this->cart_model->getTotalCartPrice($order->cart_id);
+				}
+				$data["orders"] = $orders;
+				$this->load->view('layout/user/header', array("title" => "Manage Orders"));
+				$this->loadUserSidebar('show_cart_order', 'your_order_active');
+				$this->load->view("user/manage_order", $data);
+				$this->load->view('layout/dashboard/logout');
+				$this->load->view('layout/user/footer');
+			// }else if($disapproved){
+			// 	$message = '<div class="alert alert-danger" style="margin-top:10px" role="alert">Waiting for contract to approve by Admin </div>';
+			// 	$this->session->set_flashdata('message', $message);
+			// 	redirect('user/your_order');
+			// }
 		}
 		
 		public function view_order($cartid) {
