@@ -7,8 +7,7 @@
 			$this->load->model('cart_model');
 			$this->load->model('gate_model');
 			$this->load->model('admin_model');
-			$this->load->model('Chat_model');
-			// $this->load->helper("form");
+		
 		}
 
 		public function index() {
@@ -195,17 +194,6 @@
 			
 		}
 		
-
-		// public function chat() {
-		// 	$this->gate_model->user_gate();
-		// 	$this->load->view('layout/user/header');
-		// 	$this->loadUserSidebar('show_cart_order', 'your_cart_active');
-		// 	$this->load->view('user/chat', $data);
-		// 	$this->load->view('layout/dashboard/logout');
-		// 	$this->load->view('layout/account/footer');
-		// }
-
-		
 		public function your_order() {
 			// $userId = $_GET['userId'];
 			// $approve = $this->admin_model->approveContract($userId);
@@ -258,6 +246,8 @@
 			}
 			
 		}
+
+		
 		
 	}
 	?>

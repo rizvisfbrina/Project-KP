@@ -39,6 +39,9 @@ class Admin_model extends CI_Model {
 	{
 		return $this->db->where("user_id", $userid)->update(USER, array("ban_flag" => 0));
 	}
+
+
+	
 }
 
 ?>
