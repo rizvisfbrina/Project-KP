@@ -57,6 +57,7 @@ class Admin_model extends CI_Model {
 	{
 		return $this->db->where("cart_id", $cartid)->update(USER, array("approve_flag" => 1));
 	}
+
 }
 
 ?>
