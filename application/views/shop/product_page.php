@@ -25,7 +25,7 @@
 
 <!-- 
 										<div class="col-sm-4">
-											<input type="text" name="inputPrice" class="form-control" placeholder="Masukkan Harga" id="iPrice" />
+											<input type="text" name="inputPrice" class="form-control" placeholder="Masukkan Nilai" id="iPrice" />
 											<input type="hidden" name="product_id" class="form-control" value="<?= $product->product_id; ?>"/>
 										<br>
 											<button class="pull-right btn btn-block btn-primary" type="button" onclick=""><span class="fa fa-paper-plane pull-left"></span>
@@ -38,7 +38,7 @@
 											<form>
 												<h5 class="card-title">Rentang</h5>
 													<select name="price">
-														<option value="satu">ini namanya rentang harga</option>
+														<option value="satu">ini namanya rentang nilai</option>
 														<option value="dua">Dua</option>
 														<option value="tiga">Tiga</option>
 														<option value="empat">Empat</option>
@@ -60,7 +60,7 @@
 					<!-- /.col-lg-9 -->
 					</div>
 					<div class="card-body">
-						<h2 class="colorlib-heading">Rincian Harga</h2>
+						<h2 class="colorlib-heading">Rincian Nilai</h2>
 						<img class="img-responsive" src="<?= base_url($product->image_detail); ?>" alt="" width="900" height="900">
 					</div>
 					<br><br>
@@ -92,7 +92,7 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 				<p class="colorlib-lead">Apabila ingin negosiasi silahkan hubungi kami</p>
-				<p><a href="<?= site_url('chat') ?>" class="btn btn-primary btn-learn">Chat</a></p>
+				<p><a href="<?= site_url('chat'); ?>" class="btn btn-primary btn-learn">Chat</a></p>
 			</div>
 		</div>
 	</div>

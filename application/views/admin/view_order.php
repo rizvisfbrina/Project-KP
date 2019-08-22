@@ -22,9 +22,9 @@
 								<tr>
 									<th>No</th>
 									<th>Nama Jasa</th>
-									<th>Harga Per Unit</th>
+									<th>Nilai Per Unit</th>
 									<th>Jumlah</th>
-									<th>Harga Total</th>
+									<th>Total Nilai</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -39,7 +39,7 @@
 								<?php endforeach; ?>
 								<tr>
 										<td colspan="4"  align="right"><strong>
-											<!-- Total Harga<br>Total Pajak<br> -->
+											<!-- Total Nilai<br>Total Pajak<br> -->
 										Total yang harus dibayar</strong></td>
 										<td><!-- 
 											Rp <?= number_format ( $product->quantity * $product->price , 2  );  ?><br>

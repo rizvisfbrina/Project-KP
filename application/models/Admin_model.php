@@ -39,25 +39,6 @@ class Admin_model extends CI_Model {
 	{
 		return $this->db->where("user_id", $userid)->update(USER, array("ban_flag" => 0));
 	}
-
-	public function approveContract($cartid = "")
-	{
-		return $this->db->where("cart_id", $cartid)->update(USER, array("approve_flag" => 0));
-	}
-
-	/**
-        Unban users
-
-        @param int $user_id (DEFAULT = "")
-
-        @return void
-    **/
-
-	public function disapprovedContract($cartid = "")
-	{
-		return $this->db->where("cart_id", $cartid)->update(USER, array("approve_flag" => 1));
-	}
-
 }
 
 ?>

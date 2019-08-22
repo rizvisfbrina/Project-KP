@@ -38,7 +38,7 @@
         </div>
 
         <div class="form-group">
-          <label class="control-label">Harga</label>
+          <label class="control-label">Nilai</label>
           <div>
             <input id="product_price" type="text" class="form-control" name="product_price" value="<?= $product->price; ?>">
           </div>

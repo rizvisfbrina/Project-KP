@@ -37,7 +37,7 @@
 
         <div class="form-group">
           <?= form_error('product_price'); ?>
-          <label class="control-label">Harga</label>
+          <label class="control-label">Nilai</label>
           <div>
             <input id="product_price" type="text" class="form-control" name="product_price" value="<?php echo set_value('product_price'); ?>">
           </div>

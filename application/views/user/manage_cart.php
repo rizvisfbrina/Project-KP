@@ -25,7 +25,7 @@
                     <th>Gambar</th>
                     <th>Nama Jasa</th>
                     <th>Jumlah</th>
-                    <th>Harga</th>
+                    <th>Nilai</th>
                     <th>Opsi</th>
                   </thead>
                   <?php foreach($cartData as $cart): ?>
@@ -59,7 +59,7 @@
                 ?>
                 <tr>
                   <td colspan=3></td>
-                  <th colspan=1>Total Harga<br>Pajak </th>
+                  <th colspan=1>Total Nilai<br>Pajak </th>
                   <th colspan='2'>Rp <?= number_format( $totalPrice1, 2); ?><br>Rp <?= number_format( $totalTax , 2); ?></th>
                 </tr>
                 <tr>

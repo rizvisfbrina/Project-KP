@@ -18,7 +18,7 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Total Harga</th>
+                  <th>Total Nilai</th>
                   <th>Tanggal Checkout</th>
                   <th>Opsi</th>
                 </tr>

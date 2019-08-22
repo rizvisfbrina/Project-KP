@@ -18,7 +18,7 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Pembeli</th>
-                  <th>Total Harga</th>
+                  <th>Total Nilai</th>
                   <th>Opsi</th>
                 </tr>
               </thead>

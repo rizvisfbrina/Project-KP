@@ -93,13 +93,6 @@ class User_model extends CI_Model {
 	public function update_shipping_address($data, $user_id) {
 		return $this->db->where(array("user_id" => $user_id))->update('address_table', $data);
 	}
-
-	public function getAdmin()
-	{
-		// if($where) $this->db->where($where);
-		// return $this->db->get("user_table");
-		return $this->db->get_where(USER, array("user_type" => "admin"));
-	}
 }
 
 ?>

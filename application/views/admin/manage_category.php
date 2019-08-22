@@ -60,7 +60,7 @@
 							<tr>
 								<th width="5%">No</th>
 								<th width="20%">Nama Jasa</th>
-								<th width="20%">Harga</th>
+								<th width="20%">Nilai</th>
 								<th width="20%">Deskripsi</th>
 								<th width="20%">Kategori</th>
 								<th width="15%">Opsi</th>

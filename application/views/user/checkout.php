@@ -17,7 +17,7 @@
 				<div class="card-block px-3 py-3">
 					<div class="row">
 						<div class="form-group col-xs-2 col-md-2">
-							<label for="total_price"><strong>Total Harga:</strong></label>
+							<label for="total_price"><strong>Total Nilai</strong></label>
 						</div>
 						<div class="form-group col-xs-10 col-md-4">
 							<input type="text" class="form-control" name="f_name" value="Rp <?= number_format( $totalPrice, 2 ); ?>" disabled/>

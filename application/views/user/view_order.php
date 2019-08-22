@@ -25,7 +25,7 @@
                     <th>Gambar Jasa</th>
                     <th>Nama Jasa</th>
                     <th>Jumlah</th>
-                    <th>Harga</th>
+                    <th>Nilai</th>
                   </thead>
                   <?php foreach($cartData as $cart): ?>
                   <tr align="center">
@@ -55,7 +55,7 @@
                 <tr>
                   <td colspan=3></td>
                     <th colspan=1>
-                      Total Harga 
+                      Total Nilai 
                       <br>Total Pajak  
                       <br>Total yang harus dibayar
                     </th>

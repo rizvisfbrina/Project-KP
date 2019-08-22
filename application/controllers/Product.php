@@ -48,7 +48,7 @@ class Product extends My_Controller {
 	
 	public function update($product_id) {
 		$this->form_validation->set_rules(
-			'product_name', 'Product Name',
+			'product_name', 'Nama Jasa',
 			'required|min_length[10]',
 			array(
 				'required' => '<div class="alert alert-danger">Anda belum mengisi %s.</div>',
@@ -57,7 +57,7 @@ class Product extends My_Controller {
 		);
 	
 		$this->form_validation->set_rules(
-			'product_price', 'Product Price', 'required|decimal', 
+			'product_price', 'Nilai', 'required|decimal', 
 			array(
 				'required' => '<div class="alert alert-danger">Anda belum mengisi %s.</div>',
 				'decimal' => '<div class="alert alert-danger"> {field} harus berisi angka.</div>'
@@ -65,7 +65,7 @@ class Product extends My_Controller {
 		);
 	
 		$this->form_validation->set_rules(
-			'product_description', 'Product Description', 'required|min_length[10]',
+			'product_description', 'Deskripsi Detail', 'required|min_length[10]',
 			array(
 				'required' => '<div class="alert alert-danger">Anda belum mengisi %s.</div>',
 				'min_length' => '<div class="alert alert-danger"> {field} harus berisi minimal sebanyak {param} karakter.</div>'
@@ -73,7 +73,7 @@ class Product extends My_Controller {
 		);
 	
 		$this->form_validation->set_rules(
-			'product_short_description', 'Product Short Description', 
+			'product_short_description', 'Deskripsi Singkat', 
 			'required|min_length[10]|max_length[500]',
 			array(
 				'required' => '<div class="alert alert-danger">Anda harus mengisi %s.</div>',
@@ -150,7 +150,7 @@ class Product extends My_Controller {
 	
 	public function add() {
 		$this->form_validation->set_rules(
-			'product_name', 'Product Name',
+			'product_name', 'Nama Jasa',
 			'required|min_length[10]',
 			array(
 				'required' => '<div class="alert alert-danger">Anda belum mengisi %s.</div>',
@@ -159,7 +159,7 @@ class Product extends My_Controller {
 		);
 
 		$this->form_validation->set_rules(
-			'product_price', 'Product Price', 'required|decimal', 
+			'product_price', 'Nilai', 'required|decimal', 
 			array(
 				'required' => '<div class="alert alert-danger">Anda belum mengisi %s.</div>',
 				'decimal' => '<div class="alert alert-danger"> {field} harus berisi angka.</div>'
@@ -167,7 +167,7 @@ class Product extends My_Controller {
 		);
 
 		$this->form_validation->set_rules(
-			'product_description', 'Product Description', 'required|min_length[10]',
+			'product_description', 'Deskripsi Detail', 'required|min_length[10]',
 			array(
 				'required' => '<div class="alert alert-danger">Anda harus mengisi %s.</div>',
 				'min_length' => '<div class="alert alert-danger">{field} harus berisi minimal sebanyak {param} karakter.</div>'
@@ -175,7 +175,7 @@ class Product extends My_Controller {
 		);
 	
 		$this->form_validation->set_rules(
-			'product_short_description', 'Product Short Description', 
+			'product_short_description', 'Deskripsi Singkat', 
 			'required|min_length[10]|max_length[500]',
 			array(
 				'required' => '<div class="alert alert-danger">Anda harus mengisi %s.</div>',
@@ -212,7 +212,7 @@ class Product extends My_Controller {
 				$error = $this->upload->display_errors();
 				$data["categories"] = $this->category_model->getAllCategoriesWithSubCategories();
 				$data["image_error"] = "<div class='alert alert-danger'>".$error."</div>";
-				$this->load->view('layout/dashboard/header', array("title" => "Add Product"));
+				$this->load->view('layout/dashboard/header', array("title" => "Tambah Jasa"));
 				$this->loadSidebar("show_product", "add_product_active");
 				$this->load->view('admin/add_product',$data);
 				$this->load->view('layout/dashboard/footer');

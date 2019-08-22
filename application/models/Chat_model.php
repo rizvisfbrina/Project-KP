@@ -2,19 +2,27 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
  
 class Chat_model extends CI_Model {  
-  	public function getAll($where="")
+  
+	function add_message($message, $nickname, $guid)
 	{
-		if($where) $this->db->where($where);
-		$this->db->order_by("created_at","ASC");
-		return $this->db->get("chat_table");
+		$data = array(
+			'message'	=> (string) $message,
+			'nickname'	=> (string) $nickname,
+			'guid'		=> (string)	$guid,
+			'timestamp'	=> time(),
+		);
+		  
+		$this->db->insert('chat_table', $data);
 	}
-	
-	public function getInsert($data){
-		return $this->db->set($data)->insert("chat_table");
-	}
-	
-	public function getLastId($where){
-		return $this->db->where($where)->order_by("id_chat","DESC")->limit(1)->get("chat_table")->row_array();
+ 
+	function get_messages($timestamp)
+	{
+		$this->db->where('timestamp >', $timestamp);
+		$this->db->order_by('timestamp', 'DESC');
+		$this->db->limit(10); 
+		$query = $this->db->get('chat_table');
+		
+		return array_reverse($query->result_array());
 	}
  
  
